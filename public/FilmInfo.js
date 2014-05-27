@@ -71,12 +71,12 @@
     recoverable: (boolean: TRUE when the parser has a error recovery rule available for this particular error)
   }
 */
-var parseExam = (function(){
+var FilmInfo = (function(){
 var parser = {trace: function trace() { },
 yy: {},
-symbols_: {"error":2,"html":3,"exam":4,"DOT":5,"EOF":6,"test":7,"mult":8,"quest":9,"TPREGUNTA":10,"LITERALTEXT":11,"DOTCOMMA":12,"op":13,"NTEST":14,"MPREGUNTA":15,"opm":16,"NMULT":17,"PREGUNTA":18,"CUADROTEXTO":19,"$accept":0,"$end":1},
-terminals_: {2:"error",5:"DOT",6:"EOF",10:"TPREGUNTA",11:"LITERALTEXT",12:"DOTCOMMA",14:"NTEST",15:"MPREGUNTA",17:"NMULT",18:"PREGUNTA",19:"CUADROTEXTO"},
-productions_: [0,[3,3],[4,0],[4,2],[4,2],[4,2],[7,4],[13,0],[13,4],[8,4],[16,0],[16,4],[9,4]],
+symbols_: {"error":2,"html":3,"ficha":4,"DOT":5,"EOF":6,"title":7,"info":8,"sinop":9,"link":10,"TITULO":11,"LITERALTEXT":12,"DOTCOMMA":13,"op":14,"INFORMACION":15,"SINOPSIS":16,"ENLACE":17,"ENTRANCE":18,"$accept":0,"$end":1},
+terminals_: {2:"error",5:"DOT",6:"EOF",11:"TITULO",12:"LITERALTEXT",13:"DOTCOMMA",15:"INFORMACION",16:"SINOPSIS",17:"ENLACE",18:"ENTRANCE"},
+productions_: [0,[3,3],[4,0],[4,2],[4,2],[4,2],[4,2],[7,4],[8,4],[9,4],[10,4],[14,0],[14,4]],
 performAction: function anonymous(yytext, yyleng, yylineno, yy, yystate /* action[1] */, $$ /* vstack */, _$ /* lstack */) {
 /* this == yyval */
 
@@ -86,7 +86,7 @@ case 1:
           this.$ = "&lt!DOCTYPE html&gt <br> " +
                "&lthtml&gt         <br> " +
                "&lthead&gt          <br> " +
-               "&lttitle&gt Examen &lt/title&gt <br> " +
+               "&lttitle&gt Ficha &lt/title&gt <br> " +
                "&ltmeta http-equiv='Content-type' content='text/html'; charset='UTF-8' /&gt <br> " +
                "&lt/head&gt <br> " +
                "&ltbody&gt <br>  " +
@@ -113,34 +113,36 @@ case 5: this.$ = " " + $$[$0-1];
 	if ($$[$0])
 	  this.$ = " " + $$[$0-1] + " " + $$[$0];
 break;
-case 6:
+case 6: this.$ = " " + $$[$0-1];
+	if ($$[$0])
+	  this.$ = " " + $$[$0-1] + " " + $$[$0];
+break;
+case 7:
 	  this.$ = " " + $$[$0-2] + " " + $$[$0] + " <br> ";
         
 break;
-case 8:
+case 8: 
+	  this.$ = " " + $$[$0-2] + " <br> " + $$[$0] + " <br> ";
+        
+break;
+case 9:
+          this.$ = " " + $$[$0-2] + " &ltinput type='text'&gt <br>";
+       
+break;
+case 10: 
+	  this.$ = " " + $$[$0-2] + " <br> " + $$[$0] + " <br> ";
+        
+break;
+case 12:
             this.$ = "&ltinput type='radio'&gt " + $$[$0-2] + " <br> ";
           if($$[$0])
 	    this.$ = "&ltinput type='radio'&gt " + $$[$0-2] + " <br> " + $$[$0] ;
        
 break;
-case 9: 
-	  this.$ = " " + $$[$0-2] + " <br> " + $$[$0] + " <br> ";
-        
-break;
-case 11:
-          this.$ = "&ltinput type='checkbox'&gt " + $$[$0-2] + " <br> ";
-          if($$[$0])
-	    this.$ = "&ltinput type='checkbox'&gt " + $$[$0-2] + " <br> " + $$[$0] ;
-       
-break;
-case 12:
-          this.$ = " " + $$[$0-2] + " &ltinput type='text'&gt <br>";
-       
-break;
 }
 },
-table: [{3:1,4:2,5:[2,2],7:3,8:4,9:5,10:[1,6],15:[1,7],18:[1,8]},{1:[3]},{5:[1,9]},{4:10,5:[2,2],7:3,8:4,9:5,10:[1,6],15:[1,7],18:[1,8]},{4:11,5:[2,2],7:3,8:4,9:5,10:[1,6],15:[1,7],18:[1,8]},{4:12,5:[2,2],7:3,8:4,9:5,10:[1,6],15:[1,7],18:[1,8]},{11:[1,13]},{11:[1,14]},{11:[1,15]},{6:[1,16]},{5:[2,3]},{5:[2,4]},{5:[2,5]},{12:[1,17]},{12:[1,18]},{12:[1,19]},{1:[2,1]},{5:[2,7],10:[2,7],13:20,14:[1,21],15:[2,7],18:[2,7]},{5:[2,10],10:[2,10],15:[2,10],16:22,17:[1,23],18:[2,10]},{19:[1,24]},{5:[2,6],10:[2,6],15:[2,6],18:[2,6]},{11:[1,25]},{5:[2,9],10:[2,9],15:[2,9],18:[2,9]},{11:[1,26]},{5:[2,12],10:[2,12],15:[2,12],18:[2,12]},{12:[1,27]},{12:[1,28]},{5:[2,7],10:[2,7],13:29,14:[1,21],15:[2,7],18:[2,7]},{5:[2,10],10:[2,10],15:[2,10],16:30,17:[1,23],18:[2,10]},{5:[2,8],10:[2,8],15:[2,8],18:[2,8]},{5:[2,11],10:[2,11],15:[2,11],18:[2,11]}],
-defaultActions: {10:[2,3],11:[2,4],12:[2,5],16:[2,1]},
+table: [{3:1,4:2,5:[2,2],7:3,8:4,9:5,10:6,11:[1,7],15:[1,8],16:[1,9],17:[1,10]},{1:[3]},{5:[1,11]},{4:12,5:[2,2],7:3,8:4,9:5,10:6,11:[1,7],15:[1,8],16:[1,9],17:[1,10]},{4:13,5:[2,2],7:3,8:4,9:5,10:6,11:[1,7],15:[1,8],16:[1,9],17:[1,10]},{4:14,5:[2,2],7:3,8:4,9:5,10:6,11:[1,7],15:[1,8],16:[1,9],17:[1,10]},{4:15,5:[2,2],7:3,8:4,9:5,10:6,11:[1,7],15:[1,8],16:[1,9],17:[1,10]},{12:[1,16]},{12:[1,17]},{12:[1,18]},{12:[1,19]},{6:[1,20]},{5:[2,3]},{5:[2,4]},{5:[2,5]},{5:[2,6]},{13:[1,21]},{13:[1,22]},{13:[1,23]},{13:[1,24]},{1:[2,1]},{5:[2,11],11:[2,11],14:25,15:[2,11],16:[2,11],17:[2,11],18:[1,26]},{5:[2,11],11:[2,11],14:27,15:[2,11],16:[2,11],17:[2,11],18:[1,26]},{5:[2,11],11:[2,11],14:28,15:[2,11],16:[2,11],17:[2,11],18:[1,26]},{5:[2,11],11:[2,11],14:29,15:[2,11],16:[2,11],17:[2,11],18:[1,26]},{5:[2,7],11:[2,7],15:[2,7],16:[2,7],17:[2,7]},{12:[1,30]},{5:[2,8],11:[2,8],15:[2,8],16:[2,8],17:[2,8]},{5:[2,9],11:[2,9],15:[2,9],16:[2,9],17:[2,9]},{5:[2,10],11:[2,10],15:[2,10],16:[2,10],17:[2,10]},{13:[1,31]},{5:[2,11],11:[2,11],14:32,15:[2,11],16:[2,11],17:[2,11],18:[1,26]},{5:[2,12],11:[2,12],15:[2,12],16:[2,12],17:[2,12]}],
+defaultActions: {12:[2,3],13:[2,4],14:[2,5],15:[2,6],20:[2,1]},
 parseError: function parseError(str, hash) {
     if (hash.recoverable) {
         this.trace(str);
@@ -278,10 +280,6 @@ parse: function parse(input) {
     }
     return true;
 }};
-
-
-var pregunta = 0;
-
 /* generated by jison-lex 0.2.1 */
 var lexer = (function(){
 var lexer = {
@@ -608,43 +606,38 @@ stateStackSize:function stateStackSize() {
 options: {},
 performAction: function anonymous(yy,yy_,$avoiding_name_collisions,YY_START) {
 
-var reserved_words = { PI: 'PI', E : 'E' }
-
-
 var YYSTATE=YY_START;
 switch($avoiding_name_collisions) {
 case 0:/* skip whitespace and comments */
 break;
 case 1:return 'NUMBER'
 break;
-case 2:return 17
+case 2:return 11
 break;
-case 3:return 10
+case 3:return 15
 break;
-case 4:return 15
+case 4:return 16
 break;
-case 5:return 18
+case 5:return 17
 break;
-case 6:return 19                                  
+case 6:return 'CUADROTEXTO'                                  
 break;
-case 7:return 14    
+case 7:return 18    
 break;
-case 8:return 12
+case 8:return 13
 break;
-case 9:return 'COMMA'
+case 9:return 5
 break;
-case 10:return 5
+case 10:return 6
 break;
-case 11:return 6
+case 11:return 12
 break;
-case 12:return 11
-break;
-case 13:return 'INVALID'
+case 12:return 'INVALID'
 break;
 }
 },
-rules: [/^(?:\s+|#.*)/,/^(?:\b\d+(\.\d*)?([eE][-+]?\d+)?\b)/,/^(?:<>)/,/^(?:\?T\b)/,/^(?:\?M\b)/,/^(?:\?\?)/,/^(?:\[\])/,/^(?:[*])/,/^(?:[;])/,/^(?:[,])/,/^(?:[.])/,/^(?:$)/,/^(?:([A-Za-z_]\w*\s*)+\??)/,/^(?:.)/],
-conditions: {"INITIAL":{"rules":[0,1,2,3,4,5,6,7,8,9,10,11,12,13],"inclusive":true}}
+rules: [/^(?:\s+|#.*)/,/^(?:\b\d+(\.\d*)?([eE][-+]?\d+)?\b)/,/^(?:TITULO\b)/,/^(?:INFORMACION\b)/,/^(?:SINOPSIS\b)/,/^(?:ENLACE\b)/,/^(?:\[\])/,/^(?:[*])/,/^(?:[;])/,/^(?:[.])/,/^(?:$)/,/^(?:([A-Za-z_,]\w*\s*)+\??)/,/^(?:.)/],
+conditions: {"INITIAL":{"rules":[0,1,2,3,4,5,6,7,8,9,10,11,12],"inclusive":true}}
 };
 return lexer;
 })();
@@ -658,9 +651,9 @@ return new Parser;
 
 
 if (typeof require !== 'undefined' && typeof exports !== 'undefined') {
-exports.parser = parseExam;
-exports.Parser = parseExam.Parser;
-exports.parse = function () { return parseExam.parse.apply(parseExam, arguments); };
+exports.parser = FilmInfo;
+exports.Parser = FilmInfo.Parser;
+exports.parse = function () { return FilmInfo.parse.apply(FilmInfo, arguments); };
 exports.main = function commonjsMain(args) {
     if (!args[1]) {
         console.log('Usage: '+args[0]+' FILE');
