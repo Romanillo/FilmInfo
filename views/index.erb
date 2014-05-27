@@ -1,0 +1,42 @@
+<h1>Información de Peliculas</h1>
+
+<script type="text/javascript" src="/FilmInfo.js"></script>
+<script type="text/javascript" src="/main.js"></script>
+
+<div id="contenido">
+    <p>
+    <nav>
+    <ul>
+      <% programs.sort.each do |p| %>
+      <li><a href="<%= p.name %>" <%=actual?('/'+p.name)%>><%= p.name %></a></li>
+      <% end %>
+    </ul>
+    </nav>
+    <br><br>
+    <table>
+    <tr>
+      <td>
+        <form action="/save" method="post">
+          <textarea id="input" name="input" autofocus cols = "40" rows = "4"><%= source %></textarea>
+          <br/>
+          <label for="saveas">Save as</label>
+          <input id="saveas" type="text" name="fname" 
+                 title="Un identificador (que no sea la palabra 'test')"
+                 pattern="^(?!test$)\w+$"/>
+        </form>
+      </td>
+      <td><button class="parseboton" id="parse" type="button">parse</button></td>
+    </tr>
+    </table>
+    </p>
+
+  <p>
+    <div id="flash"><%= flash[:notice] if flash[:notice]%></div>
+  </p>
+  
+  <div class="output"><!-- Salida del programa --> 
+    <pre id ="OUTPUT">
+Copia el html generado aquí
+    </pre>
+  </div>
+</div> 
