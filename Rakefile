@@ -3,11 +3,11 @@ task :default => :jison do
   sh "rackup"
 end
 
-task :jison => %w{public/parseExam.js}
+task :jison => %w{public/FilmInfo.js}
 
 desc "Compila Jison"
-file "public/parseExam.js" => %w{public/parseExam.jison} do
-  sh "jison public/parseExam.jison public/parseExam.l -o public/parseExam.js"
+file "public/FilmInfo.js" => %w{public/FilmInfo.jison} do
+  sh "jison public/FilmInfo.jison public/FilmInfo.l -o public/FilmInfo.js"
 end
 
 desc "Borrar base de datos"
