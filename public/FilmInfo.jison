@@ -79,21 +79,21 @@ title
 info
     : INFORMACION LITERALTEXT DOTCOMMA op
 	{ 
-	  $$ = "&ltdiv class="separator" style="clear: both; text-align: center;"&gt&lta href="http://imageshack.us/a/img46/6905/fichatecnicax.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"&gt&ltimg border="0" src="http://imageshack.us/a/img46/6905/fichatecnicax.png" /&gt&lt/a&gt&lt/div&gt" + $2 + " &ltbr&gt " + $4 + " &ltbr&gt ";
+	  $$ = "teeeexto 1" + $2 + " &ltbr&gt " + $4 + " &ltbr&gt ";
         }
     ;
     
 sinop
     :  SINOPSIS LITERALTEXT DOTCOMMA op
        {
-          $$ = "&ltdiv class="separator" style="clear: both; text-align: center;"&gt&lta href="http://imageshack.us/a/img32/4840/sinopsisz.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"&gt&ltimg border="0" src="http://imageshack.us/a/img32/4840/sinopsisz.png" /&gt&lt/a&gt&lt/div&gt" + $2 + " &ltinput type='text'&gt &ltbr&gt";
+          $$ = "teeeeexto 2" + $2 + " &ltinput type='text'&gt &ltbr&gt";
        }
     ;
 
 link
     : ENLACE LITERALTEXT DOTCOMMA op
 	{ 
-	  $$ = "&ltdiv class="separator" style="clear: both; text-align: center;"&gt&lta href="http://img198.imageshack.us/img198/3383/descargawp.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"&gt&ltimg border="0" src="http://img198.imageshack.us/img198/3383/descargawp.png" /&gt&lt/a&gt&lt/div&gt" + $2 + " &ltbr&gt " + $4 + " &ltbr&gt ";
+	  $$ = "teeeeeexto 3" + $2 + " &ltbr&gt " + $4 + " &ltbr&gt ";
         }
     ;
 
