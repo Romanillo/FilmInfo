@@ -12,6 +12,7 @@ ENLACE                         	 return 'ENLACE'
 \[\]                             return 'CUADROTEXTO'                                  
 [*]                              return 'ENTRANCE'    
 [;]                              return 'DOTCOMMA'
+[:]								 return 'DOUBLEDOT'
 [.]                              return 'DOT'
 <<EOF>>                          return 'EOF'
 ([A-Za-z_,]\w*\s*)+\??           return 'LITERALTEXT'
@@ -33,17 +34,17 @@ ENLACE                         	 return 'ENLACE'
 html
     :ficha DOT EOF
         {            
-          $$ = "&lt!DOCTYPE html&gt <br> " +
-               "&lthtml&gt         <br> " +
-               "&lthead&gt          <br> " +
-               "&lttitle&gt Ficha &lt/title&gt <br> " +
-               "&ltmeta http-equiv='Content-type' content='text/html'; charset='UTF-8' /&gt <br> " +
-               "&lt/head&gt <br> " +
-               "&ltbody&gt <br>  " +
+          $$ = "&lt!DOCTYPE html&gt &ltbr&gt " +
+               "&lthtml&gt         &ltbr&gt " +
+               "&lthead&gt          &ltbr&gt " +
+               "&lttitle&gt FilmInfo &lt/title&gt &ltbr&gt " +
+               "&ltmeta http-equiv='Content-type' content='text/html'; charset='UTF-8' /&gt &ltbr&gt " +
+               "&lt/head&gt &ltbr&gt " +
+               "&ltbody&gt &ltbr&gt  " +
                     
-               " " + $1 + " <br> " +
+               " " + $1 + " &ltbr&gt " +
                  
-               "&lt/body&gt <br> " +
+               "&lt/body&gt &ltbr&gt " +
                "&lt/html&gt ";
           return $$;
         }
@@ -72,37 +73,37 @@ ficha
 title
     : TITULO LITERALTEXT DOTCOMMA op 
 	{
-	  $$ = " " + $2 + " " + $4 + " <br> ";
+	  $$ = "&lth1&gt" + $2 + "&lt/h1&gt" + $4 + " &ltbr&gt ";
         }
     ;
     
 info
     : INFORMACION LITERALTEXT DOTCOMMA op
 	{ 
-	  $$ = "teeeexto 1" + $2 + " &ltbr&gt " + $4 + " &ltbr&gt ";
+	  $$ = "&ltbr /&gt&ltbr /&gt&ltbr /&gt&ltdiv class=\"separator\" style=\"clear: both; text-align: center;\"&gt&lta href=\"http://imageshack.us/a/img46/6905/fichatecnicax.png\" imageanchor=\"1\" style=\"margin-left: 1em; margin-right: 1em;\"&gt&ltimg border=\"0\" src=\"http://imageshack.us/a/img46/6905/fichatecnicax.png\" /&gt&lt/a&gt&lt/div&gt" + $2 + " &ltbr&gt " + $4 + " &ltbr&gt ";
         }
     ;
     
 sinop
     :  SINOPSIS LITERALTEXT DOTCOMMA op
        {
-          $$ = "teeeeexto 2" + $2 + " &ltinput type='text'&gt &ltbr&gt";
+          $$ = "&ltdiv class=\"separator\" style=\"clear: both; text-align: center;\"&gt&lta href=\"http://imageshack.us/a/img32/4840/sinopsisz.png\" imageanchor=\"1\" style=\"margin-left: 1em; margin-right: 1em;\"&gt&ltimg border=\"0\" src=\"http://imageshack.us/a/img32/4840/sinopsisz.png\" /&gt&lt/a&gt&lt/div&gt" + $2 + " &ltinput type='text'&gt &ltbr&gt";
        }
     ;
 
 link
     : ENLACE LITERALTEXT DOTCOMMA op
-	{ 
-	  $$ = "teeeeeexto 3" + $2 + " &ltbr&gt " + $4 + " &ltbr&gt ";
+	{
+	  $$ = "&ltdiv class=\"separator\" style=\"clear: both; text-align: center;\"&gt&lta href=\"http://img198.imageshack.us/img198/3383/descargawp.png\" imageanchor=\"1\" style=\"margin-left: 1em; margin-right: 1em;\"&gt&ltimg border=\"0\" src=\"http://img198.imageshack.us/img198/3383/descargawp.png\" /&gt&lt/a&gt&lt/div&gt" + $2 + " &ltbr&gt " + $4 + " &ltbr&gt ";
         }
     ;
 
 op
     : /* empty */
-    | ENTRANCE LITERALTEXT DOTCOMMA op
+    | ENTRANCE LITERALTEXT DOUBLEDOT LITERALTEXT DOTCOMMA op
        {
-            $$ = "&ltinput type='radio'&gt " + $2 + " &ltbr&gt ";
-          if($4)
-	    $$ = "&ltinput type='radio'&gt " + $2 + " &ltbr&gt " + $4 ;
+            $$ = "&ltb&gt" + $2 + "&lt/b&gt" + $4 + &ltbr&gt ";
+          if($6)
+	    $$ = "&ltb&gt" + $2 + "&lt/b&gt" + $4 + &ltbr&gt " + $6 ;
        }
     ;
