@@ -102,20 +102,20 @@ op
     : /* cadena vacia */
     | ENTRANCE LITERALTEXT DOUBLEDOT LITERALTEXT DOTCOMMA op
        {
-          $$ = "&ltb&gt" + $2 + ":&lt/b&gt " + $4 + "<br> &ltbr&gt ";
+          $$ = "&ltb&gt" + $2 + ":&lt/b&gt " + $4 + "&ltbr&gt <br>  ";
           if($6)
-	        $$ = "&ltb&gt" + $2 + ":&lt/b&gt " + $4 + "<br> &ltbr&gt " + $6 ;
+	        $$ = "&ltb&gt" + $2 + ":&lt/b&gt " + $4 + "&ltbr&gt <br> " + $6 ;
        }
 	| ENTRANCE LITERALTEXT DOUBLEDOT NUMBER DOTCOMMA op
 		{
-			$$ = "&ltb&gt" + $2 + ":&lt/b&gt " + $4 + "<br> &ltbr&gt ";
+			$$ = "&ltb&gt" + $2 + ":&lt/b&gt " + $4 + "&ltbr&gt <br> ";
           if($6)
-	        $$ = "&ltb&gt" + $2 + ":&lt/b&gt " + $4 + "<br> &ltbr&gt " + $6 ;
+	        $$ = "&ltb&gt" + $2 + ":&lt/b&gt " + $4 + "&ltbr&gt <br> " + $6 ;
 		}
     | ENTRANCE LITERALTEXT DOTCOMMA op
 		{
-			$$ = " " + $2 + "<br> &ltbr&gt ";
+			$$ = " " + $2 + "&ltbr&gt <br> ";
 			if($4)
-				$$ = " " + $2 + "<br> &ltbr&gt " + $4 ;
+				$$ = " " + $2 + "&ltbr&gt <br> " + $4 ;
 		}
 	;

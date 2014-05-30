@@ -131,21 +131,21 @@ case 10:
         
 break;
 case 12:
-          this.$ = "&ltb&gt" + $$[$0-4] + ":&lt/b&gt " + $$[$0-2] + "<br> &ltbr&gt ";
+          this.$ = "&ltb&gt" + $$[$0-4] + ":&lt/b&gt " + $$[$0-2] + "&ltbr&gt <br>  ";
           if($$[$0])
-	        this.$ = "&ltb&gt" + $$[$0-4] + ":&lt/b&gt " + $$[$0-2] + "<br> &ltbr&gt " + $$[$0] ;
+	        this.$ = "&ltb&gt" + $$[$0-4] + ":&lt/b&gt " + $$[$0-2] + "&ltbr&gt <br> " + $$[$0] ;
        
 break;
 case 13:
-			this.$ = "&ltb&gt" + $$[$0-4] + ":&lt/b&gt " + $$[$0-2] + "<br> &ltbr&gt ";
+			this.$ = "&ltb&gt" + $$[$0-4] + ":&lt/b&gt " + $$[$0-2] + "&ltbr&gt <br> ";
           if($$[$0])
-	        this.$ = "&ltb&gt" + $$[$0-4] + ":&lt/b&gt " + $$[$0-2] + "<br> &ltbr&gt " + $$[$0] ;
+	        this.$ = "&ltb&gt" + $$[$0-4] + ":&lt/b&gt " + $$[$0-2] + "&ltbr&gt <br> " + $$[$0] ;
 		
 break;
 case 14:
-			this.$ = " " + $$[$0-2] + "<br> &ltbr&gt ";
+			this.$ = " " + $$[$0-2] + "&ltbr&gt <br> ";
 			if($$[$0])
-				this.$ = " " + $$[$0-2] + "<br> &ltbr&gt " + $$[$0] ;
+				this.$ = " " + $$[$0-2] + "&ltbr&gt <br> " + $$[$0] ;
 		
 break;
 }
