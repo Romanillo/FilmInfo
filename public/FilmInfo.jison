@@ -4,18 +4,19 @@
 %%
 
 \s+|\#.*                         /* skip whitespace and comments */
-TITULO                           				return 'TITULO'
-INFORMACION                      				return 'INFORMACION'
-SINOPSIS                         				return 'SINOPSIS'
-ENLACE                         	 				return 'ENLACE'
-\[\]                             				return 'CUADROTEXTO'                                  
-[*]                              				return 'ENTRANCE'    
-[;]                             				return 'DOTCOMMA'
-[:]								 				return 'DOUBLEDOT'
-[.]                              				return 'DOT'
-<<EOF>>                          				return 'EOF'
-([A-Za-z_,.\|áéíóúäëïöüñ\/-|d+]\w*\s*)+\??    	return 'LITERALTEXT'
-.                                				return 'INVALID'
+\b\d+("."\d*)?([eE][-+]?\d+)?\b 	 	return 'NUMBER'
+TITULO                           		return 'TITULO'
+INFORMACION                      		return 'INFORMACION'
+SINOPSIS                         		return 'SINOPSIS'
+ENLACE                         	 		return 'ENLACE'
+\[\]                             		return 'CUADROTEXTO'                                  
+[*]                              		return 'ENTRANCE'    
+[;]                             		return 'DOTCOMMA'
+[:]								 		return 'DOUBLEDOT'
+[.]                              		return 'DOT'
+<<EOF>>                          		return 'EOF'
+([A-Za-z_,.\|áéíóúäëïöüñ\/-]\w*\s*)+\??    return 'LITERALTEXT'
+.                                		return 'INVALID'
 
 /lex
 
@@ -23,6 +24,7 @@ ENLACE                         	 				return 'ENLACE'
 %right INFORMACION
 %right SINOPSIS
 %right ENLACE
+%left NUMBER
 %left ENTRANCE
 
 
@@ -104,6 +106,12 @@ op
           if($6)
 	        $$ = "&ltb&gt" + $2 + ":&lt/b&gt " + $4 + "<br> " + $6 ;
        }
+	| ENTRANCE LITERALTEXT DOUBLEDOT NUMBER DOTCOMMA op
+		{
+			$$ = "&ltb&gt" + $2 + ":&lt/b&gt " + $4 + "<br> ";
+          if($6)
+	        $$ = "&ltb&gt" + $2 + ":&lt/b&gt " + $4 + "<br> " + $6 ;
+		}
     | ENTRANCE LITERALTEXT DOTCOMMA op
 		{
 			$$ = " " + $2 + "<br> ";
