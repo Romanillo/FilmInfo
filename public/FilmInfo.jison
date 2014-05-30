@@ -87,7 +87,7 @@ info
 sinop
     :  SINOPSIS DOTCOMMA op2
        {
-          $$ = "&ltdiv class=&quotseparator&quot style=&quotclear: both; text-align: center;&quot&gt&lta href=&quothttp://imageshack.us/a/img32/4840/sinopsisz.png&quot imageanchor=&quot1&quot style=&quotmargin-left: 1em; margin-right: 1em;&quot&gt&ltimg border=&quot0&quot src=&quothttp://imageshack.us/a/img32/4840/sinopsisz.png&quot /&gt&lt/a&gt&lt/div&gt" + $3 + " <br> ";
+          $$ = "&ltdiv class=&quotseparator&quot style=&quotclear: both; text-align: center;&quot&gt&lta href=&quothttp://imageshack.us/a/img32/4840/sinopsisz.png&quot imageanchor=&quot1&quot style=&quotmargin-left: 1em; margin-right: 1em;&quot&gt&ltimg border=&quot0&quot src=&quothttp://imageshack.us/a/img32/4840/sinopsisz.png&quot /&gt&lt/a&gt&lt/div&gt" + " <br> " + $3 + " <br> ";
        }
     ;
 
@@ -102,9 +102,9 @@ op
     : /* empty */
     | ENTRANCE LITERALTEXT DOUBLEDOT LITERALTEXT DOTCOMMA op
        {
-          $$ = "&ltb&gt" + $2 + "&lt/b&gt " + $4 + "<br> ";
+          $$ = "&ltb&gt" + $2 + ":&lt/b&gt " + $4 + "<br> ";
           if($6)
-	        $$ = "&ltb&gt" + $2 + "&lt/b&gt " + $4 + "<br> " + $6 ;
+	        $$ = "&ltb&gt" + $2 + ":&lt/b&gt " + $4 + "<br> " + $6 ;
        }
     ;
 

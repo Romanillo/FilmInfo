@@ -123,7 +123,7 @@ case 8:
         
 break;
 case 9:
-          this.$ = "&ltdiv class=&quotseparator&quot style=&quotclear: both; text-align: center;&quot&gt&lta href=&quothttp://imageshack.us/a/img32/4840/sinopsisz.png&quot imageanchor=&quot1&quot style=&quotmargin-left: 1em; margin-right: 1em;&quot&gt&ltimg border=&quot0&quot src=&quothttp://imageshack.us/a/img32/4840/sinopsisz.png&quot /&gt&lt/a&gt&lt/div&gt" + $$[$0] + " <br> ";
+          this.$ = "&ltdiv class=&quotseparator&quot style=&quotclear: both; text-align: center;&quot&gt&lta href=&quothttp://imageshack.us/a/img32/4840/sinopsisz.png&quot imageanchor=&quot1&quot style=&quotmargin-left: 1em; margin-right: 1em;&quot&gt&ltimg border=&quot0&quot src=&quothttp://imageshack.us/a/img32/4840/sinopsisz.png&quot /&gt&lt/a&gt&lt/div&gt" + " <br> " + $$[$0] + " <br> ";
        
 break;
 case 10:
@@ -131,9 +131,9 @@ case 10:
         
 break;
 case 12:
-          this.$ = "&ltb&gt" + $$[$0-4] + "&lt/b&gt " + $$[$0-2] + "<br> ";
+          this.$ = "&ltb&gt" + $$[$0-4] + ":&lt/b&gt " + $$[$0-2] + "<br> ";
           if($$[$0])
-	        this.$ = "&ltb&gt" + $$[$0-4] + "&lt/b&gt " + $$[$0-2] + "<br> " + $$[$0] ;
+	        this.$ = "&ltb&gt" + $$[$0-4] + ":&lt/b&gt " + $$[$0-2] + "<br> " + $$[$0] ;
        
 break;
 case 14:
