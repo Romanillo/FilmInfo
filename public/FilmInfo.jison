@@ -41,9 +41,9 @@ html
                "&lt/head&gt &ltbr&gt " +
                "&ltbody&gt &ltbr&gt  " +
                     
-               " " + $1 + " &ltbr&gt " +
+               " " + $1 + " <br> " +
                  
-               "&lt/body&gt &ltbr&gt " +
+               "&lt/body&gt <br> " +
                "&lt/html&gt ";
           return $$;
         }

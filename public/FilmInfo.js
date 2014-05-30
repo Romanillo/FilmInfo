@@ -91,9 +91,9 @@ case 1:
                "&lt/head&gt &ltbr&gt " +
                "&ltbody&gt &ltbr&gt  " +
                     
-               " " + $$[$0-2] + " &ltbr&gt " +
+               " " + $$[$0-2] + " <br> " +
                  
-               "&lt/body&gt &ltbr&gt " +
+               "&lt/body&gt <br> " +
                "&lt/html&gt ";
           return this.$;
         
