@@ -74,9 +74,9 @@
 var FilmInfo = (function(){
 var parser = {trace: function trace() { },
 yy: {},
-symbols_: {"error":2,"html":3,"ficha":4,"DOT":5,"EOF":6,"title":7,"info":8,"sinop":9,"link":10,"TITULO":11,"LITERALTEXT":12,"DOTCOMMA":13,"op":14,"INFORMACION":15,"SINOPSIS":16,"ENLACE":17,"ENTRANCE":18,"$accept":0,"$end":1},
-terminals_: {2:"error",5:"DOT",6:"EOF",11:"TITULO",12:"LITERALTEXT",13:"DOTCOMMA",15:"INFORMACION",16:"SINOPSIS",17:"ENLACE",18:"ENTRANCE"},
-productions_: [0,[3,3],[4,0],[4,2],[4,2],[4,2],[4,2],[7,4],[8,4],[9,4],[10,4],[14,0],[14,4]],
+symbols_: {"error":2,"html":3,"ficha":4,"DOT":5,"EOF":6,"title":7,"info":8,"sinop":9,"link":10,"TITULO":11,"LITERALTEXT":12,"DOTCOMMA":13,"op":14,"INFORMACION":15,"SINOPSIS":16,"op2":17,"ENLACE":18,"ENTRANCE":19,"DOUBLEDOT":20,"$accept":0,"$end":1},
+terminals_: {2:"error",5:"DOT",6:"EOF",11:"TITULO",12:"LITERALTEXT",13:"DOTCOMMA",15:"INFORMACION",16:"SINOPSIS",18:"ENLACE",19:"ENTRANCE",20:"DOUBLEDOT"},
+productions_: [0,[3,3],[4,0],[4,2],[4,2],[4,2],[4,2],[7,4],[8,3],[9,3],[10,3],[14,0],[14,6],[17,0],[17,4]],
 performAction: function anonymous(yytext, yyleng, yylineno, yy, yystate /* action[1] */, $$ /* vstack */, _$ /* lstack */) {
 /* this == yyval */
 
@@ -119,26 +119,32 @@ case 7:
         
 break;
 case 8: 
-	  this.$ = "<br><br>&ltdiv class=&quotseparator&quot style=&quotclear: both; text-align: center;&quot&gt&lta href=&quothttp://imageshack.us/a/img46/6905/fichatecnicax.png&quot imageanchor=&quot1&quot style=&quotmargin-left: 1em; margin-right: 1em;&quot&gt&ltimg border=&quot0&quot src=&quothttp://imageshack.us/a/img46/6905/fichatecnicax.png&quot /&gt&lt/a&gt&lt/div&gt" + $$[$0-2] + " &ltbr&gt " + $$[$0] + " <br> ";
+	  this.$ = "<br><br>&ltdiv class=&quotseparator&quot style=&quotclear: both; text-align: center;&quot&gt&lta href=&quothttp://imageshack.us/a/img46/6905/fichatecnicax.png&quot imageanchor=&quot1&quot style=&quotmargin-left: 1em; margin-right: 1em;&quot&gt&ltimg border=&quot0&quot src=&quothttp://imageshack.us/a/img46/6905/fichatecnicax.png&quot /&gt&lt/a&gt&lt/div&gt" + $$[$0-1] + " &ltbr&gt " + $$[$01] + " <br> ";
         
 break;
 case 9:
-          this.$ = "&ltdiv class=&quotseparator&quot style=&quotclear: both; text-align: center;&quot&gt&lta href=&quothttp://imageshack.us/a/img32/4840/sinopsisz.png&quot imageanchor=&quot1&quot style=&quotmargin-left: 1em; margin-right: 1em;&quot&gt&ltimg border=&quot0&quot src=&quothttp://imageshack.us/a/img32/4840/sinopsisz.png&quot /&gt&lt/a&gt&lt/div&gt" + $$[$0-2] + " <br> ";
+          this.$ = "&ltdiv class=&quotseparator&quot style=&quotclear: both; text-align: center;&quot&gt&lta href=&quothttp://imageshack.us/a/img32/4840/sinopsisz.png&quot imageanchor=&quot1&quot style=&quotmargin-left: 1em; margin-right: 1em;&quot&gt&ltimg border=&quot0&quot src=&quothttp://imageshack.us/a/img32/4840/sinopsisz.png&quot /&gt&lt/a&gt&lt/div&gt" + $$[$0-1] + " <br> ";
        
 break;
 case 10:
-	  this.$ = "&ltdiv class=&quotseparator&quot style=&quotclear: both; text-align: center;&quot&gt&lta href=&quothttp://img198.imageshack.us/img198/3383/descargawp.png&quot imageanchor=&quot1&quot style=&quotmargin-left: 1em; margin-right: 1em;&quot&gt&ltimg border=&quot0&quot src=&quothttp://img198.imageshack.us/img198/3383/descargawp.png&quot /&gt&lt/a&gt&lt/div&gt" + $$[$0-2] + " <br> " + $$[$0] + " <br> ";
+	  this.$ = "&ltdiv class=&quotseparator&quot style=&quotclear: both; text-align: center;&quot&gt&lta href=&quothttp://img198.imageshack.us/img198/3383/descargawp.png&quot imageanchor=&quot1&quot style=&quotmargin-left: 1em; margin-right: 1em;&quot&gt&ltimg border=&quot0&quot src=&quothttp://img198.imageshack.us/img198/3383/descargawp.png&quot /&gt&lt/a&gt&lt/div&gt" + $$[$0-1] + " <br> " + $$[$01] + " <br> ";
         
 break;
 case 12:
-          this.$ = " " + $$[$0-2] + "<br> ";
+          this.$ = "&ltb&gt" + $$[$0-4] + "&lt/b&gt " + $$[$0-2] + "<br> ";
           if($$[$0])
-	        this.$ = " " + $$[$0-2] + "<br> " + $$[$0] ;
+	        this.$ = "&ltb&gt" + $$[$0-4] + "&lt/b&gt " + $$[$0-2] + "<br> " + $$[$0] ;
        
+break;
+case 14:
+			this.$ = " " + $$[$0-2] + "<br> ";
+			if($$[$0])
+				this.$ = " " + $$[$0-2] + "<br> " + $$[$0] ;
+		
 break;
 }
 },
-table: [{3:1,4:2,5:[2,2],7:3,8:4,9:5,10:6,11:[1,7],15:[1,8],16:[1,9],17:[1,10]},{1:[3]},{5:[1,11]},{4:12,5:[2,2],7:3,8:4,9:5,10:6,11:[1,7],15:[1,8],16:[1,9],17:[1,10]},{4:13,5:[2,2],7:3,8:4,9:5,10:6,11:[1,7],15:[1,8],16:[1,9],17:[1,10]},{4:14,5:[2,2],7:3,8:4,9:5,10:6,11:[1,7],15:[1,8],16:[1,9],17:[1,10]},{4:15,5:[2,2],7:3,8:4,9:5,10:6,11:[1,7],15:[1,8],16:[1,9],17:[1,10]},{12:[1,16]},{12:[1,17]},{12:[1,18]},{12:[1,19]},{6:[1,20]},{5:[2,3]},{5:[2,4]},{5:[2,5]},{5:[2,6]},{13:[1,21]},{13:[1,22]},{13:[1,23]},{13:[1,24]},{1:[2,1]},{5:[2,11],11:[2,11],14:25,15:[2,11],16:[2,11],17:[2,11],18:[1,26]},{5:[2,11],11:[2,11],14:27,15:[2,11],16:[2,11],17:[2,11],18:[1,26]},{5:[2,11],11:[2,11],14:28,15:[2,11],16:[2,11],17:[2,11],18:[1,26]},{5:[2,11],11:[2,11],14:29,15:[2,11],16:[2,11],17:[2,11],18:[1,26]},{5:[2,7],11:[2,7],15:[2,7],16:[2,7],17:[2,7]},{12:[1,30]},{5:[2,8],11:[2,8],15:[2,8],16:[2,8],17:[2,8]},{5:[2,9],11:[2,9],15:[2,9],16:[2,9],17:[2,9]},{5:[2,10],11:[2,10],15:[2,10],16:[2,10],17:[2,10]},{13:[1,31]},{5:[2,11],11:[2,11],14:32,15:[2,11],16:[2,11],17:[2,11],18:[1,26]},{5:[2,12],11:[2,12],15:[2,12],16:[2,12],17:[2,12]}],
+table: [{3:1,4:2,5:[2,2],7:3,8:4,9:5,10:6,11:[1,7],15:[1,8],16:[1,9],18:[1,10]},{1:[3]},{5:[1,11]},{4:12,5:[2,2],7:3,8:4,9:5,10:6,11:[1,7],15:[1,8],16:[1,9],18:[1,10]},{4:13,5:[2,2],7:3,8:4,9:5,10:6,11:[1,7],15:[1,8],16:[1,9],18:[1,10]},{4:14,5:[2,2],7:3,8:4,9:5,10:6,11:[1,7],15:[1,8],16:[1,9],18:[1,10]},{4:15,5:[2,2],7:3,8:4,9:5,10:6,11:[1,7],15:[1,8],16:[1,9],18:[1,10]},{12:[1,16]},{13:[1,17]},{13:[1,18]},{13:[1,19]},{6:[1,20]},{5:[2,3]},{5:[2,4]},{5:[2,5]},{5:[2,6]},{13:[1,21]},{5:[2,11],11:[2,11],14:22,15:[2,11],16:[2,11],18:[2,11],19:[1,23]},{5:[2,13],11:[2,13],15:[2,13],16:[2,13],17:24,18:[2,13],19:[1,25]},{5:[2,13],11:[2,13],15:[2,13],16:[2,13],17:26,18:[2,13],19:[1,25]},{1:[2,1]},{5:[2,11],11:[2,11],14:27,15:[2,11],16:[2,11],18:[2,11],19:[1,23]},{5:[2,8],11:[2,8],15:[2,8],16:[2,8],18:[2,8]},{12:[1,28]},{5:[2,9],11:[2,9],15:[2,9],16:[2,9],18:[2,9]},{12:[1,29]},{5:[2,10],11:[2,10],15:[2,10],16:[2,10],18:[2,10]},{5:[2,7],11:[2,7],15:[2,7],16:[2,7],18:[2,7]},{20:[1,30]},{13:[1,31]},{12:[1,32]},{5:[2,13],11:[2,13],15:[2,13],16:[2,13],17:33,18:[2,13],19:[1,25]},{13:[1,34]},{5:[2,14],11:[2,14],15:[2,14],16:[2,14],18:[2,14]},{5:[2,11],11:[2,11],14:35,15:[2,11],16:[2,11],18:[2,11],19:[1,23]},{5:[2,12],11:[2,12],15:[2,12],16:[2,12],18:[2,12]}],
 defaultActions: {12:[2,3],13:[2,4],14:[2,5],15:[2,6],20:[2,1]},
 parseError: function parseError(str, hash) {
     if (hash.recoverable) {
@@ -615,26 +621,28 @@ case 3:return 15
 break;
 case 4:return 16
 break;
-case 5:return 17
+case 5:return 18
 break;
 case 6:return 'CUADROTEXTO'                                  
 break;
-case 7:return 18    
+case 7:return 19    
 break;
 case 8:return 13
 break;
-case 9:return 5
+case 9:return 20
 break;
-case 10:return 6
+case 10:return 5
 break;
-case 11:return 12
+case 11:return 6
 break;
-case 12:return 'INVALID'
+case 12:return 12
+break;
+case 13:return 'INVALID'
 break;
 }
 },
-rules: [/^(?:\s+|#.*)/,/^(?:\b\d+(\.\d*)?([eE][-+]?\d+)?\b)/,/^(?:TITULO\b)/,/^(?:INFORMACION\b)/,/^(?:SINOPSIS\b)/,/^(?:ENLACE\b)/,/^(?:\[\])/,/^(?:[*])/,/^(?:[;])/,/^(?:[.])/,/^(?:$)/,/^(?:([A-Za-z_,]\w*\s*)+\??)/,/^(?:.)/],
-conditions: {"INITIAL":{"rules":[0,1,2,3,4,5,6,7,8,9,10,11,12],"inclusive":true}}
+rules: [/^(?:\s+|#.*)/,/^(?:\b\d+(\.\d*)?([eE][-+]?\d+)?\b)/,/^(?:TITULO\b)/,/^(?:INFORMACION\b)/,/^(?:SINOPSIS\b)/,/^(?:ENLACE\b)/,/^(?:\[\])/,/^(?:[*])/,/^(?:[;])/,/^(?:[:])/,/^(?:[.])/,/^(?:$)/,/^(?:([A-Za-z_,]\w*\s*)+\??)/,/^(?:.)/],
+conditions: {"INITIAL":{"rules":[0,1,2,3,4,5,6,7,8,9,10,11,12,13],"inclusive":true}}
 };
 return lexer;
 })();
