@@ -623,20 +623,18 @@ case 7:return 18
 break;
 case 8:return 13
 break;
-case 9:return 'DOUBLEDOT'
+case 9:return 5
 break;
-case 10:return 5
+case 10:return 6
 break;
-case 11:return 6
+case 11:return 12
 break;
-case 12:return 12
-break;
-case 13:return 'INVALID'
+case 12:return 'INVALID'
 break;
 }
 },
-rules: [/^(?:\s+|#.*)/,/^(?:\b\d+(\.\d*)?([eE][-+]?\d+)?\b)/,/^(?:TITULO\b)/,/^(?:INFORMACION\b)/,/^(?:SINOPSIS\b)/,/^(?:ENLACE\b)/,/^(?:\[\])/,/^(?:[*])/,/^(?:[;])/,/^(?:[:])/,/^(?:[.])/,/^(?:$)/,/^(?:([A-Za-z_,]\w*\s*)+\??)/,/^(?:.)/],
-conditions: {"INITIAL":{"rules":[0,1,2,3,4,5,6,7,8,9,10,11,12,13],"inclusive":true}}
+rules: [/^(?:\s+|#.*)/,/^(?:\b\d+(\.\d*)?([eE][-+]?\d+)?\b)/,/^(?:TITULO\b)/,/^(?:INFORMACION\b)/,/^(?:SINOPSIS\b)/,/^(?:ENLACE\b)/,/^(?:\[\])/,/^(?:[*])/,/^(?:[;])/,/^(?:[.])/,/^(?:$)/,/^(?:([A-Za-z_,]\w*\s*)+\??)/,/^(?:.)/],
+conditions: {"INITIAL":{"rules":[0,1,2,3,4,5,6,7,8,9,10,11,12],"inclusive":true}}
 };
 return lexer;
 })();
