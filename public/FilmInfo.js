@@ -119,15 +119,15 @@ case 7:
         
 break;
 case 8: 
-	  this.$ = "&ltbr /&gt&ltbr /&gt&ltbr /&gt&ltdiv class=\"separator\" style=\"clear: both; text-align: center;\"&gt&lta href=\"http://imageshack.us/a/img46/6905/fichatecnicax.png\" imageanchor=\"1\" style=\"margin-left: 1em; margin-right: 1em;\"&gt&ltimg border=\"0\" src=\"http://imageshack.us/a/img46/6905/fichatecnicax.png\" /&gt&lt/a&gt&lt/div&gt" + $$[$0-2] + " &ltbr&gt " + $$[$0] + " &ltbr&gt ";
+	  this.$ = "&ltbr /&gt&ltbr /&gt&ltbr /&gt&ltdiv class=&quotseparator&quot style=&quotclear: both; text-align: center;&quot&gt&lta href=&quothttp://imageshack.us/a/img46/6905/fichatecnicax.png&quot imageanchor=&quot1&quot style=&quotmargin-left: 1em; margin-right: 1em;&quot&gt&ltimg border=&quot0&quot src=&quothttp://imageshack.us/a/img46/6905/fichatecnicax.png&quot /&gt&lt/a&gt&lt/div&gt" + $$[$0-2] + " &ltbr&gt " + $$[$0] + " &ltbr&gt ";
         
 break;
 case 9:
-          this.$ = "&ltdiv class=\"separator\" style=\"clear: both; text-align: center;\"&gt&lta href=\"http://imageshack.us/a/img32/4840/sinopsisz.png\" imageanchor=\"1\" style=\"margin-left: 1em; margin-right: 1em;\"&gt&ltimg border=\"0\" src=\"http://imageshack.us/a/img32/4840/sinopsisz.png\" /&gt&lt/a&gt&lt/div&gt" + $$[$0-2] + " &ltinput type='text'&gt &ltbr&gt";
+          this.$ = "&ltdiv class=&quotseparator&quot style=&quotclear: both; text-align: center;&quot&gt&lta href=&quothttp://imageshack.us/a/img32/4840/sinopsisz.png&quot imageanchor=&quot1&quot style=&quotmargin-left: 1em; margin-right: 1em;&quot&gt&ltimg border=&quot0&quot src=&quothttp://imageshack.us/a/img32/4840/sinopsisz.png&quot /&gt&lt/a&gt&lt/div&gt" + $$[$0-2] + " &ltinput type='text'&gt &ltbr&gt";
        
 break;
 case 10:
-	  this.$ = "&ltdiv class=\"separator\" style=\"clear: both; text-align: center;\"&gt&lta href=\"http://img198.imageshack.us/img198/3383/descargawp.png\" imageanchor=\"1\" style=\"margin-left: 1em; margin-right: 1em;\"&gt&ltimg border=\"0\" src=\"http://img198.imageshack.us/img198/3383/descargawp.png\" /&gt&lt/a&gt&lt/div&gt" + $$[$0-2] + " &ltbr&gt " + $$[$0] + " &ltbr&gt ";
+	  this.$ = "&ltdiv class=&quotseparator&quot style=&quotclear: both; text-align: center;&quot&gt&lta href=&quothttp://img198.imageshack.us/img198/3383/descargawp.png&quot imageanchor=&quot1&quot style=&quotmargin-left: 1em; margin-right: 1em;&quot&gt&ltimg border=&quot0&quot src=&quothttp://img198.imageshack.us/img198/3383/descargawp.png&quot /&gt&lt/a&gt&lt/div&gt" + $$[$0-2] + " &ltbr&gt " + $$[$0] + " &ltbr&gt ";
         
 break;
 case 12:
