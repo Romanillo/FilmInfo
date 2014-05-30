@@ -102,8 +102,8 @@ op
     : /* empty */
     | ENTRANCE LITERALTEXT DOUBLEDOT LITERALTEXT DOTCOMMA op
        {
-            $$ = "&ltb&gt" + $2 + "&lt/b&gt" + $4 + &ltbr&gt ";
+            $$ = "&ltb&gt" + $2 + ":&lt/b&gt" + $4 + "&ltbr&gt ";
           if($6)
-	    $$ = "&ltb&gt" + $2 + "&lt/b&gt" + $4 + &ltbr&gt " + $6 ;
+	    $$ = "&ltb&gt" + $2 + ":&lt/b&gt" + $4 + "&ltbr&gt " + $6 ;
        }
     ;

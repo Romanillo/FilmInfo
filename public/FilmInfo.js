@@ -131,9 +131,9 @@ case 10:
         
 break;
 case 12:
-            this.$ = "&ltb&gt" + $$[$0-4] + "&lt/b&gt" + $$[$0-2] + &ltbr&gt ";
+            this.$ = "&ltb&gt" + $$[$0-4] + ":&lt/b&gt" + $$[$0-2] + "&ltbr&gt ";
           if($$[$0])
-	    this.$ = "&ltb&gt" + $$[$0-4] + "&lt/b&gt" + $$[$0-2] + &ltbr&gt " + $$[$0] ;
+	    this.$ = "&ltb&gt" + $$[$0-4] + ":&lt/b&gt" + $$[$0-2] + "&ltbr&gt " + $$[$0] ;
        
 break;
 }
