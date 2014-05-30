@@ -80,30 +80,30 @@ title
 info
     : INFORMACION LITERALTEXT DOTCOMMA op
 	{ 
-	  $$ = "Informacion " + $2 + " &ltbr&gt " + $4 + " &ltbr&gt ";
+	  $$ = "&ltbr /&gt&ltbr /&gt&ltbr /&gt&ltdiv class=&quotseparator&quot style=&quotclear: both; text-align: center;&quot&gt&lta href=&quothttp://imageshack.us/a/img46/6905/fichatecnicax.png&quot imageanchor=&quot1&quot style=&quotmargin-left: 1em; margin-right: 1em;&quot&gt&ltimg border=&quot0&quot src=&quothttp://imageshack.us/a/img46/6905/fichatecnicax.png&quot /&gt&lt/a&gt&lt/div&gt" + $2 + " &ltbr&gt " + $4 + " &ltbr&gt ";
         }
     ;
     
 sinop
     :  SINOPSIS LITERALTEXT DOTCOMMA op
        {
-          $$ = "Sinopsis " + $2 + " &ltinput type='text'&gt &ltbr&gt";
+          $$ = "&ltdiv class=&quotseparator&quot style=&quotclear: both; text-align: center;&quot&gt&lta href=&quothttp://imageshack.us/a/img32/4840/sinopsisz.png&quot imageanchor=&quot1&quot style=&quotmargin-left: 1em; margin-right: 1em;&quot&gt&ltimg border=&quot0&quot src=&quothttp://imageshack.us/a/img32/4840/sinopsisz.png&quot /&gt&lt/a&gt&lt/div&gt" + $2 + " &ltinput type='text'&gt &ltbr&gt";
        }
     ;
 
 link
     : ENLACE LITERALTEXT DOTCOMMA op
 	{
-	  $$ = "Enlace " + $2 + " &ltbr&gt " + $4 + " &ltbr&gt ";
+	  $$ = "&ltdiv class=&quotseparator&quot style=&quotclear: both; text-align: center;&quot&gt&lta href=&quothttp://img198.imageshack.us/img198/3383/descargawp.png&quot imageanchor=&quot1&quot style=&quotmargin-left: 1em; margin-right: 1em;&quot&gt&ltimg border=&quot0&quot src=&quothttp://img198.imageshack.us/img198/3383/descargawp.png&quot /&gt&lt/a&gt&lt/div&gt" + $2 + " &ltbr&gt " + $4 + " &ltbr&gt ";
         }
     ;
 
 op
     : /* empty */
-    | ENTRANCE LITERALTEXT DOUBLEDOT LITERALTEXT DOTCOMMA op
+    | ENTRANCE LITERALTEXT DOTCOMMA op
        {
-            $$ = "&ltb&gt" + $2 + ":&lt/b&gt" + $4 + "&ltbr&gt ";
-          if($6)
-	    $$ = "&ltb&gt" + $2 + ":&lt/b&gt" + $4 + "&ltbr&gt " + $6 ;
+          $$ = " " + $2 + "&ltbr&gt ";
+          if($4)
+	        $$ = " " + $2 + "&ltbr&gt " + $4 ;
        }
     ;
