@@ -115,11 +115,11 @@ case 6: this.$ = " " + $$[$0-1];
 	  this.$ = " " + $$[$0-1] + " " + $$[$0];
 break;
 case 7:
-	  this.$ = "&lth1&gt" + $$[$0-2] + "&lt/h1&gt" + $$[$0] + " <br> ";
+	  this.$ = "&lth1&gt" + $$[$0-2] + "&lt/h1&gt" + " <br> ";
         
 break;
 case 8: 
-	  this.$ = "<br><br>&ltdiv class=&quotseparator&quot style=&quotclear: both; text-align: center;&quot&gt&lta href=&quothttp://imageshack.us/a/img46/6905/fichatecnicax.png&quot imageanchor=&quot1&quot style=&quotmargin-left: 1em; margin-right: 1em;&quot&gt&ltimg border=&quot0&quot src=&quothttp://imageshack.us/a/img46/6905/fichatecnicax.png&quot /&gt&lt/a&gt&lt/div&gt" + " <br> " + $$[$0] + " <br> ";
+	  this.$ = "<br>&ltdiv class=&quotseparator&quot style=&quotclear: both; text-align: center;&quot&gt&lta href=&quothttp://imageshack.us/a/img46/6905/fichatecnicax.png&quot imageanchor=&quot1&quot style=&quotmargin-left: 1em; margin-right: 1em;&quot&gt&ltimg border=&quot0&quot src=&quothttp://imageshack.us/a/img46/6905/fichatecnicax.png&quot /&gt&lt/a&gt&lt/div&gt" + " <br> " + $$[$0] + " <br> ";
         
 break;
 case 9:
@@ -131,21 +131,21 @@ case 10:
         
 break;
 case 12:
-          this.$ = "&ltb&gt" + $$[$0-4] + ":&lt/b&gt " + $$[$0-2] + "<br> ";
+          this.$ = "&ltb&gt" + $$[$0-4] + ":&lt/b&gt " + $$[$0-2] + "<br> &ltbr&gt ";
           if($$[$0])
-	        this.$ = "&ltb&gt" + $$[$0-4] + ":&lt/b&gt " + $$[$0-2] + "<br> " + $$[$0] ;
+	        this.$ = "&ltb&gt" + $$[$0-4] + ":&lt/b&gt " + $$[$0-2] + "<br> &ltbr&gt " + $$[$0] ;
        
 break;
 case 13:
-			this.$ = "&ltb&gt" + $$[$0-4] + ":&lt/b&gt " + $$[$0-2] + "<br> ";
+			this.$ = "&ltb&gt" + $$[$0-4] + ":&lt/b&gt " + $$[$0-2] + "<br> &ltbr&gt ";
           if($$[$0])
-	        this.$ = "&ltb&gt" + $$[$0-4] + ":&lt/b&gt " + $$[$0-2] + "<br> " + $$[$0] ;
+	        this.$ = "&ltb&gt" + $$[$0-4] + ":&lt/b&gt " + $$[$0-2] + "<br> &ltbr&gt " + $$[$0] ;
 		
 break;
 case 14:
-			this.$ = " " + $$[$0-2] + "<br> ";
+			this.$ = " " + $$[$0-2] + "<br> &ltbr&gt ";
 			if($$[$0])
-				this.$ = " " + $$[$0-2] + "<br> " + $$[$0] ;
+				this.$ = " " + $$[$0-2] + "<br> &ltbr&gt " + $$[$0] ;
 		
 break;
 }
