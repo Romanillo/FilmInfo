@@ -4,19 +4,19 @@
 %%
 
 \s+|\#.*                         /* skip whitespace and comments */
-\b\d+("."\d*)?([eE][-+]?\d+)?\b  return 'NUMBER'
-TITULO                           return 'TITULO'
-INFORMACION                      return 'INFORMACION'
-SINOPSIS                         return 'SINOPSIS'
-ENLACE                         	 return 'ENLACE'
-\[\]                             return 'CUADROTEXTO'                                  
-[*]                              return 'ENTRANCE'    
-[;]                              return 'DOTCOMMA'
-[:]								 return 'DOUBLEDOT'
-[.]                              return 'DOT'
-<<EOF>>                          return 'EOF'
-([A-Za-z_,]\w*\s*)+\??           return 'LITERALTEXT'
-.                                return 'INVALID'
+\b\d+("."\d*)?([eE][-+]?\d+)?\b 	 	return 'NUMBER'
+TITULO                           		return 'TITULO'
+INFORMACION                      		return 'INFORMACION'
+SINOPSIS                         		return 'SINOPSIS'
+ENLACE                         	 		return 'ENLACE'
+\[\]                             		return 'CUADROTEXTO'                                  
+[*]                              		return 'ENTRANCE'    
+[;]                             		return 'DOTCOMMA'
+[:]								 		return 'DOUBLEDOT'
+[.]                              		return 'DOT'
+<<EOF>>                          		return 'EOF'
+([A-Za-z_,.\|áéíóúäëïöüñ]\w*\s*)+\??    return 'LITERALTEXT'
+.                                		return 'INVALID'
 
 /lex
 
