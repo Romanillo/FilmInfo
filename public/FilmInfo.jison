@@ -30,7 +30,7 @@ ENLACE                         	 		return 'ENLACE'
 
 %start html
 
-%% /* language grammar */
+%% /* lenguaje generado por la gramática */
 html
     :ficha DOT EOF
         {            
@@ -51,7 +51,7 @@ html
     ;
     
 ficha
-    : /* empty */
+    : /* cadena vacia */
     | title ficha
       { $$ = " " + $1;
 	if ($2)
@@ -85,32 +85,34 @@ info
     ;
     
 sinop
-    :  SINOPSIS DOTCOMMA op2
+    :  SINOPSIS DOTCOMMA op
        {
           $$ = "&ltdiv class=&quotseparator&quot style=&quotclear: both; text-align: center;&quot&gt&lta href=&quothttp://imageshack.us/a/img32/4840/sinopsisz.png&quot imageanchor=&quot1&quot style=&quotmargin-left: 1em; margin-right: 1em;&quot&gt&ltimg border=&quot0&quot src=&quothttp://imageshack.us/a/img32/4840/sinopsisz.png&quot /&gt&lt/a&gt&lt/div&gt" + " <br> " + $3 + " <br> ";
        }
     ;
 
 link
-    : ENLACE DOTCOMMA op2
+    : ENLACE DOTCOMMA op
 	{
 	  $$ = "&ltdiv class=&quotseparator&quot style=&quotclear: both; text-align: center;&quot&gt&lta href=&quothttp://img198.imageshack.us/img198/3383/descargawp.png&quot imageanchor=&quot1&quot style=&quotmargin-left: 1em; margin-right: 1em;&quot&gt&ltimg border=&quot0&quot src=&quothttp://img198.imageshack.us/img198/3383/descargawp.png&quot /&gt&lt/a&gt&lt/div&gt" + " <br> " + $3 + " <br> ";
         }
     ;
 
 op
-    : /* empty */
+    : /* cadena vacia */
     | ENTRANCE LITERALTEXT DOUBLEDOT LITERALTEXT DOTCOMMA op
        {
           $$ = "&ltb&gt" + $2 + ":&lt/b&gt " + $4 + "<br> ";
           if($6)
 	        $$ = "&ltb&gt" + $2 + ":&lt/b&gt " + $4 + "<br> " + $6 ;
        }
-    ;
-
-op2
-	: /* empty */
-	| ENTRANCE LITERALTEXT DOTCOMMA op2
+	| ENTRANCE LITERALTEXT DOUBLEDOT NUMBER DOTCOMMA op
+		{
+			$$ = "&ltb&gt" + $2 + ":&lt/b&gt " + $4 + "<br> ";
+          if($6)
+	        $$ = "&ltb&gt" + $2 + ":&lt/b&gt " + $4 + "<br> " + $6 ;
+		}
+    | ENTRANCE LITERALTEXT DOTCOMMA op
 		{
 			$$ = " " + $2 + "<br> ";
 			if($4)
