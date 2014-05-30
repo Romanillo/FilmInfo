@@ -126,7 +126,7 @@ case 9:
           this.$ = "&ltdiv class=\"separator\" style=\"clear: both; text-align: center;\"&gt&lta href=\"http://imageshack.us/a/img32/4840/sinopsisz.png\" imageanchor=\"1\" style=\"margin-left: 1em; margin-right: 1em;\"&gt&ltimg border=\"0\" src=\"http://imageshack.us/a/img32/4840/sinopsisz.png\" /&gt&lt/a&gt&lt/div&gt" + $$[$0-2] + " &ltinput type='text'&gt &ltbr&gt";
        
 break;
-case 10: 
+case 10:
 	  this.$ = "&ltdiv class=\"separator\" style=\"clear: both; text-align: center;\"&gt&lta href=\"http://img198.imageshack.us/img198/3383/descargawp.png\" imageanchor=\"1\" style=\"margin-left: 1em; margin-right: 1em;\"&gt&ltimg border=\"0\" src=\"http://img198.imageshack.us/img198/3383/descargawp.png\" /&gt&lt/a&gt&lt/div&gt" + $$[$0-2] + " &ltbr&gt " + $$[$0] + " &ltbr&gt ";
         
 break;

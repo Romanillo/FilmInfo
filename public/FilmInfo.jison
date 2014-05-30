@@ -93,7 +93,7 @@ sinop
 
 link
     : ENLACE LITERALTEXT DOTCOMMA op
-	{ 
+	{
 	  $$ = "&ltdiv class=\"separator\" style=\"clear: both; text-align: center;\"&gt&lta href=\"http://img198.imageshack.us/img198/3383/descargawp.png\" imageanchor=\"1\" style=\"margin-left: 1em; margin-right: 1em;\"&gt&ltimg border=\"0\" src=\"http://img198.imageshack.us/img198/3383/descargawp.png\" /&gt&lt/a&gt&lt/div&gt" + $2 + " &ltbr&gt " + $4 + " &ltbr&gt ";
         }
     ;
