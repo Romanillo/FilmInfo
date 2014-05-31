@@ -41,10 +41,30 @@ body
  background-color:#b0c4de;  /* blue */
 }
 
+#nav{
+  clear:both;
+  font-weight:bold;
+  color:#666;
+  margin-left:4px;
+  float:left;
+  list-style-type:none;	
+  background:url(navshadow.gif) no-repeat 8px 100% #fff;
+  padding-bottom:21px;
+}
+
+#nav li{
+  list-style-type:none;
+  float:left;
+  margin:0 0 0 4px;
+  padding:0 0 0 10px ;
+  border-bottom:1px solid #999;
+  background:url(tabgrey.gif) #c0c0c0 top left no-repeat;
+}
+
 #OUTPUT 
 {
     background-color: white; 
-    border-style:solid;
+    border-style:groove;
     border-width:5px;
     -moz-border-radius: 20px;
     -webkit-border-radius: 20px;
