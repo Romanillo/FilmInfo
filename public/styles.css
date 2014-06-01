@@ -43,7 +43,7 @@ span.error { background-color: red }
 
 body
 {
- background-image:"http://i.imgur.com/WonAo57.jpg?1?8431";  /* blue */
+ background-image:url("http://i.imgur.com/WonAo57.jpg?1?8431");  /* fondo */
 }
 
 .button {
