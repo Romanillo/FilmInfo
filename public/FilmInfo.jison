@@ -27,7 +27,6 @@ ENLACE                         	 		return 'ENLACE'
 %left NUMBER
 %left ENTRANCE
 
-
 %start html
 
 %% /* lenguaje generado por la gramática */
