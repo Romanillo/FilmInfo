@@ -18,13 +18,15 @@
       <td>
         <form action="/save" method="post">
           <textarea id="input" name="input" autofocus cols = "40" rows = "4"><%= source %></textarea>
-          <br/><br/>
+          <br/>
           <label for="saveas">Save as</label>
           <input id="saveas" type="text" name="fname" 
-                 title="Un identificador (que no sea la palabra 'test')"
+                 title="identificador"
                  pattern="^(?!test$)\w+$"/>
         </form>
       </td>
+	</tr>
+	<tr>
       <td><button class="parseboton" id="parse" type="button">parse</button></td>
     </tr>
     </table>

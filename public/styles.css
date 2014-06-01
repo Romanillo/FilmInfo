@@ -22,7 +22,16 @@ th, td        { vertical-align: top; text-align: left; }
 tr:nth-child(odd)    { background-color:#eee; }
 tr:nth-child(even)    { background-color:#00FF66; }
 input        { text-align: right;  border: none;       }     /* Align input to the right  */
-textarea     { border: 2px solid #00b8fd; width:400px; height:400px;       }                        
+textarea     { 
+	border: 2px solid #00b8fd; 
+	width:80%; 
+	height:400px; 
+	overflow-y: scroll; 
+	overflow-x: scroll; 
+	width: 80%;
+    float: right;     
+}                    
+    
 table        { border: inset; border-color: white; }
 .hidden      { display: none; }
 .unhidden    { display: block; }
@@ -94,10 +103,14 @@ body
 #OUTPUT 
 {
     background-color: white; 
-    border-style:groove;
+    border-style:groove solid #00b8fd;
     border-width:5px;
     -moz-border-radius: 20px;
     -webkit-border-radius: 20px;
     width: 80%;
-    float: right; margin-right: 100px; margin-top: 10px;
+    float: right; 
+	margin-right: 100px; 
+	margin-top: 10px;
+	overflow-y: scroll; 
+	overflow-x: scroll; 
 }
