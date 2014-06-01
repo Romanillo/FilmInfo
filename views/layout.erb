@@ -8,15 +8,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   </head>
   <body>
-    <nav>
+    <div id='cssmenu'>
       <ul>
-        <li> <a href="/"  title="Home" <%=actual?("/")%>>Home</a> </li>
+        <li class='active'> <a href="/"  title="Home" <%=actual?("/")%>>Home</a> </li>
         <li> <a href="/gramatica"  title="Gramar" <%=actual?("/gramatica")%>>Gramatica</a> </li>
         <!--<li> <a href="/test"  title="Test" <%=actual?("/test")%>>Test</a> </li> -->
         <li> <a href="http://cc.etsii.ull.es/"  title="Centro" >Universidad</a> </li>
-        <li> <a href="http://zaach.github.io/jison/"  title="Jison">Jison</a> </li>
+        <li class='last'> <a href="http://zaach.github.io/jison/"  title="Jison">Jison</a> </li>
       </ul>
-    </nav>
+    </div>
     <%= yield %>
   </body>
 </html>
