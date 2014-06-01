@@ -22,7 +22,7 @@ th, td        { vertical-align: top; text-align: left; }
 tr:nth-child(odd)    { background-color:#eee; }
 tr:nth-child(even)    { background-color:#00FF66; }
 input        { text-align: right;  border: none;       }     /* Align input to the right  */
-textarea     { border: 2px solid #990000; width:400px; height:400px;       }                        
+textarea     { border: 2px solid #00b8fd; width:400px; height:400px;       }                        
 table        { border: inset; border-color: white; }
 .hidden      { display: none; }
 .unhidden    { display: block; }
