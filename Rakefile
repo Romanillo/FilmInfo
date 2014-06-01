@@ -7,7 +7,7 @@ task :jison => %w{public/FilmInfo.js}
 
 desc "Compila Jison"
 file "public/FilmInfo.js" => %w{public/FilmInfo.jison} do
-  sh "jison public/FilmInfo.jison public/FilmInfo.l -o public/FilmInfo.js"
+  sh "jison public/FilmInfo.jison -o public/FilmInfo.js"
 end
 
 desc "Borrar base de datos"
