@@ -98,10 +98,7 @@ body
 #OUTPUT 
 {
     background-color: white; 
-    border-style:groove solid #00b8fd;
-    border-width:5px;
-    -moz-border-radius: 20px;
-    -webkit-border-radius: 20px;
+    border:2px solid #00b8fd;
     width: 80%;
     float: right; 
 	margin-right: 100px; 
