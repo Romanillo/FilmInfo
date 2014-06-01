@@ -6,7 +6,7 @@ require 'database'
 require 'pp'
 
 set :reserved_words, %w{grammar test login auth}
-set :max_files, 9        # no more than max_files will be saved
+set :max_files, 8        # no more than max_files will be saved
 
 helpers do
   def actual?(path='/')
