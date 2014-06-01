@@ -5,13 +5,13 @@
 
 <div id="contenido">
     <p>
-    <nav>
+    <div id='filemenu'>
     <ul>
       <% programs.sort.each do |p| %>
       <li><a href="<%= p.name %>" <%=actual?('/'+p.name)%>><%= p.name %></a></li>
       <% end %>
     </ul>
-    </nav>
+    </div>
     <br><br>
 	<table>
 	<tbody>
@@ -19,14 +19,12 @@
         <td><form action="/save" method="post">
           <textarea id="input" name="input" autofocus cols = "400" rows = "4"><%= source %></textarea>
           <br>
-		  </td>
-		  </tr>
-			<tr>
-			<td>
+		</td>
+	</tr>
+	<tr>
+		<td>
           <label for="saveas">Save as</label>
-          <input id="saveas" type="text" name="fname" 
-                 title="identificador"
-                 pattern="^(?!test$)\w+$"/>
+          <input id="saveas" type="text" name="fname" title="identificador" pattern="^(?!test$)\w+$"/>
         </form>
 		</td>
 	</tr>
