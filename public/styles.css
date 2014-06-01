@@ -43,7 +43,7 @@ span.error { background-color: red }
 
 body
 {
- background-color:#b0c4de;  /* blue */
+ background-image:"/images/fondo.jpg";  /* blue */
 }
 
 #cssmenu ul {
