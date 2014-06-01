@@ -13,9 +13,6 @@
     </ul>
     </nav>
     <br><br>
-    <table>
-    <tr>
-      <td>
         <form action="/save" method="post">
           <textarea id="input" name="input" autofocus cols = "40" rows = "4"><%= source %></textarea>
           <br/>
@@ -24,12 +21,9 @@
                  title="identificador"
                  pattern="^(?!test$)\w+$"/>
         </form>
-      </td>
-	</tr>
-	<tr>
-      <td><button class="parseboton" id="parse" type="button">parse</button></td>
-    </tr>
-    </table>
+      
+      <button class="parseboton" id="parse" type="button">parse</button>
+    
     </p>
 
   <p>
