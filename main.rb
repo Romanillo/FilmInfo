@@ -24,7 +24,7 @@ get '/' do
 end
 
 
-get '/gramatica' do
+get '/grammar' do
   erb :grammar
 end
 
