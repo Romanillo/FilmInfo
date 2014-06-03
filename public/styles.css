@@ -9,8 +9,17 @@ body{
 }
 
 h1	{ 
-	text-align: center; 
-	font-size: x-large; 
+text-shadow:3px 3px 5px rgba(105,105,105,1);
+font-weight:bold;
+text-decoration:underline;
+text-transform:uppercase;
+color:#000000;
+letter-spacing:3pt;
+word-spacing:-4pt;
+font-size:55px;
+text-align:center;
+font-family:arial, helvetica, sans-serif;
+line-height:1;
 }
 
 table{
@@ -27,6 +36,8 @@ input        {
 	text-align: left;  
 	border: none;       
 	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 textarea	{ 

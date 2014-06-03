@@ -14,27 +14,27 @@
     </div>
     <br><br>
 	<table>
-	<tbody>
-	<tr>
-        <td><form action="/save" method="post">
-          <textarea id="input" name="input" autofocus cols = "400" rows = "4"><%= source %></textarea>
-          <br>
-		</td>
-	</tr>
-	<tr>
-		<td>
-          <label for="saveas">Save as</label>
-          <input id="saveas" type="text" name="fname" title="identificador" pattern="^(?!test$)\w+$"/>
-        </form>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<br>
-			<button class="button" id="parse" type="button">Parse</button>
-		</td>
-	</tr>
-	</tbody>
+		<tbody>
+			<tr>
+				<td><form action="/save" method="post">
+				  <textarea id="input" name="input" autofocus cols = "400" rows = "4"><%= source %></textarea>
+				  <br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				  <label for="saveas">Save as</label>
+				  <input id="saveas" type="text" name="fname" title="identificador" pattern="^(?!test$)\w+$"/>
+				</form>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<br>
+					<button class="button" id="parse" type="button">Parse</button>
+				</td>
+			</tr>
+		</tbody>
 	</table>
     </p>
 
@@ -46,5 +46,6 @@
     <pre id ="OUTPUT">
 Copia el html generado aquí
     </pre>
+	<button id="Button1" type="button" value="Write" onclick="WriteToFile()"/>
   </div>
 </div> 

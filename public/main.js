@@ -21,4 +21,11 @@ $(document).ready(function() {
 
 });
 
-  
+function WriteToFile()
+{
+var fso = new ActiveXObject("Scripting.FileSystemObject");
+var s = fso.CreateTextFile("C:\\FilmInfo.html", true);
+var text = document.getElementById("OUTPUT").innerText;
+s.WriteLine(text);
+s.Close();
+}
