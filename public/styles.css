@@ -3,26 +3,29 @@ html *
    font-size: large; 
    /* The !important ensures that nothing can override what you've set in this style (unless it is also important). */
    font-family: Arial;
+} 
+
+body
+{
+ background-image:url("http://i.imgur.com/WonAo57.jpg?1?8431");  /* fondo */
 }
 
-.thumb {
-    height: 75px;
-    border: 1px solid #000;
-    margin: 10px 5px 0 0;
-  }
- 
+h1	{ 
+	text-align: center; 
+	font-size: x-large; 
+}
+th, td	{ 
+	vertical-align: top; 
+	text-align: left; 
+}
+   
+input        { 	
+	text-align: right;  
+	border: none;       
+	width: 80%;
+}
 
-h1            { text-align: center; font-size: x-large; }
-th, td        { vertical-align: top; text-align: left; }   
-/* #finaltable  * { color: white; background-color: black; }   */
-
-/* #finaltable table { border-collapse:collapse; } */
-/* #finaltable table, td { border:1px solid white; } */
-#finaltable:hover td { background-color: blue; } 
-tr:nth-child(odd)    { background-color:#eee; }
-tr:nth-child(even)    { background-color:#00FF66; }
-input        { text-align: right;  border: none;       }     /* Align input to the right  */
-textarea     { 
+textarea	{ 
 	border: 2px solid #00b8fd; 
 	height:400px; 
 	overflow-y: scroll; 
@@ -30,21 +33,6 @@ textarea     {
 	width: 100%;
     float: left;     
 }                    
-    
-#result      { border-color: red; }
-.error       { font-family: terminal; background-color: red; }
-#output      { background-color: white; }
-td           { background-color: #b0c4de; }
-span.header  { background-color: blue }
-span.jump    { background-color: orange }
-span.blanks { background-color: green }
-span.nameEqualValue { background-color: cyan }
-span.error { background-color: red }
-
-body
-{
- background-image:url("http://i.imgur.com/WonAo57.jpg?1?8431");  /* fondo */
-}
 
 .button {
 	-moz-box-shadow:inset 0px 1px 0px 0px #0055ff;
@@ -91,7 +79,6 @@ body
 	top:1px;
 }
 
-
 #cssmenu ul {
   margin: 0;
   padding: 0;
@@ -106,21 +93,25 @@ body
   border-bottom: 1px solid #353535;
   zoom: 1;
 }
+
 #cssmenu ul:before {
   content: '';
   display: block;
 }
+
 #cssmenu ul:after {
   content: '';
   display: table;
   clear: both;
 }
+
 #cssmenu li {
   display: block;
   float: left;
   margin: 0;
   padding: 0 4px;
 }
+
 #cssmenu li a {
   display: block;
   float: left;
@@ -130,10 +121,12 @@ body
   padding: 10px 20px 7px 20px;
   border-bottom: 3px solid transparent;
 }
+
 #cssmenu li a:hover {
   color: #FFFFFF;
   border-bottom: 3px solid #00b8fd;
 }
+
 #cssmenu li.active a {
   display: inline;
   border-bottom: 3px solid #00b8fd;
@@ -271,21 +264,25 @@ body
   border-bottom: 1px solid #353535;
   zoom: 1;
 }
+
 #cssmenu ul:before {
   content: '';
   display: block;
 }
+
 #cssmenu ul:after {
   content: '';
   display: table;
   clear: both;
 }
+
 #cssmenu li {
   display: block;
   float: left;
   margin: 0;
   padding: 0 4px;
 }
+
 #cssmenu li a {
   display: block;
   float: left;
@@ -295,10 +292,12 @@ body
   padding: 10px 20px 7px 20px;
   border-bottom: 3px solid transparent;
 }
+
 #cssmenu li a:hover {
   color: #FFFFFF;
   border-bottom: 3px solid #00b8fd;
 }
+
 #cssmenu li.active a {
   display: inline;
   border-bottom: 3px solid #00b8fd;
