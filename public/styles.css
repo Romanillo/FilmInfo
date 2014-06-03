@@ -15,6 +15,8 @@ h1	{
 th, td	{ 
 	vertical-align: top; 
 	text-align: left; 
+	margin-left: auto;
+	margin-right: auto;
 }
    
 input        { 	
@@ -29,6 +31,8 @@ textarea	{
 	overflow-y: scroll; 
 	overflow-x: scroll; 
 	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
     float: left;     
 }                    
 
@@ -151,6 +155,8 @@ textarea	{
   -o-border-radius: 5px;
   border-radius: 5px;
   width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #filemenu ul {
@@ -308,8 +314,9 @@ textarea	{
     background-color: white; 
     border:2px solid #00b8fd;
     width: 80%;
+	margin-left: auto;
+	margin-right: auto;
     float: right; 
-	margin-right: 100px; 
 	margin-top: 10px;
 	overflow-y: scroll; 
 	overflow-x: scroll; 
