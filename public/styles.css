@@ -1,14 +1,9 @@
 html *
 {
    font-size: large; 
-   /* The !important ensures that nothing can override what you've set in this style (unless it is also important). */
    font-family: Arial;
+   background-image:url("http://i.imgur.com/WonAo57.jpg?1?8431");
 } 
-
-body
-{
- background-image:url("http://i.imgur.com/WonAo57.jpg?1?8431");  /* fondo */
-}
 
 h1	{ 
 	text-align: center; 
