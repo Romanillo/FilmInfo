@@ -14,8 +14,6 @@
 	}
 </script>
 
-<div id="contenido">
-    <p>
     <div id='filemenu'>
     <ul>
       <% programs.sort.each do |p| %>
@@ -28,7 +26,7 @@
 		<tbody>
 			<tr>
 				<td><form action="/save" method="post">
-				  <textarea id="input" name="input" autofocus cols = "400" rows = "4"><%= source %></textarea>
+				  <textarea id="input" name="input" autofocus><%= source %></textarea>
 				  <br>
 				</td>
 			</tr>
@@ -47,18 +45,14 @@
 			</tr>
 		</tbody>
 	</table>
-    </p>
+   
 
   <p>
     <div id="flash"><%= flash[:notice] if flash[:notice]%></div>
   </p>
-  
-  <div class="output"><!-- Salida del programa --> 
-    <pre id ="OUTPUT">
+ 
+    <textarea id ="OUTPUT">
 		Copia el html generado aquí
-    </pre>
+    </textarea>
 
-	
 	<button class="button" id="DownButton" type="button" onclick=`alert("roman es tonto")`>Download</button>
-  </div>
-</div> 
