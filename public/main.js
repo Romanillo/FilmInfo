@@ -21,8 +21,7 @@ $(document).ready(function() {
 
 });
 
-function WriteToFile()
-{
+function WriteToFile(){
 var fso = new ActiveXObject("Scripting.FileSystemObject");
 var s = fso.CreateTextFile("C:\\FilmInfo.html", true);
 var text = document.getElementById("#OUTPUT").innerText;

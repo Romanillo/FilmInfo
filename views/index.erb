@@ -3,6 +3,17 @@
 <script type="text/javascript" src="/FilmInfo.js"></script>
 <script type="text/javascript" src="/main.js"></script>
 
+<script type="text/javascript">
+	function WriteToFile(){
+	var fso = new ActiveXObject("Scripting.FileSystemObject");
+	var s = fso.CreateTextFile("C:\\FilmInfo.html", true);
+	var text = document.getElementById("#OUTPUT").innerText;
+	s.WriteLine(text);
+	s.WriteLine("inventado");
+	s.Close();
+	}
+</script>
+
 <div id="contenido">
     <p>
     <div id='filemenu'>
@@ -46,6 +57,8 @@
     <pre id ="OUTPUT">
 		Copia el html generado aquí
     </pre>
-	<button class="button" id="DownButton" type="button" onclick="WriteToFile()">Download</button>
+
+	
+	<button class="button" id="DownButton" type="button" onclick="javascript.WriteToFile()">Download</button>
   </div>
 </div> 
