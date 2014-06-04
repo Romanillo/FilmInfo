@@ -21,11 +21,7 @@ $(document).ready(function() {
 
 });
 
-function WriteToFile(){
-var fso = new ActiveXObject("Scripting.FileSystemObject");
-var s = fso.CreateTextFile("C:\\FilmInfo.html", true);
-var text = document.getElementById("#OUTPUT").innerText;
-s.WriteLine(text);
-s.WriteLine("inventado");
-s.Close();
-}
+
+function WriteToFile(p1, p2){
+		alert(p1 + p2);
+	}
