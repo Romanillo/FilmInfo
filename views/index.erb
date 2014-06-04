@@ -4,13 +4,8 @@
 <script type="text/javascript" src="/main.js"></script>
 
 <script type="text/javascript">
-	function WriteToFile(){
-	var fso = new ActiveXObject("Scripting.FileSystemObject");
-	var s = fso.CreateTextFile("C:\\FilmInfo.html", true);
-	var text = document.getElementById("#OUTPUT").innerText;
-	s.WriteLine(text);
-	s.WriteLine("inventado");
-	s.Close();
+	function WriteToFile(p1, p2){
+		alert(p1 + p2);
 	}
 </script>
 	
@@ -58,5 +53,5 @@
 
 	
 	<button class="button" type="button" onclick="alert('añlskdñlksdnf´ñadsljádslfmjñdslakfdasñfdsafnhjakdsbfkñjnñasodfnñn');" >DOWNLOAD</button>
-	<a href="#" class="button" onclick="WriteToFile();">DOWNLOAD</a>
+	<button class="button" type="button" onclick="WriteToFile(8 , 3);">DOWNLOAD</button>
 	<button class="button" onclick="save(this, 'codigo.html');">DOWNLOAD</button>
