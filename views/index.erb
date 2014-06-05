@@ -3,6 +3,41 @@
 <script type="text/javascript" src="/FilmInfo.js"></script>
 <script type="text/javascript" src="/main.js"></script>
 	
+	
+<script>
+function descargarArchivo(contenidoEnBlob, nombreArchivo) {
+    var reader = new FileReader();
+    reader.onload = function (event) {
+        var save = document.createElement('a');
+        save.href = event.target.result;
+        save.target = '_blank';
+        save.download = nombreArchivo || 'archivo.dat';
+        var clicEvent = new MouseEvent('click', {
+            'view': window,
+                'bubbles': true,
+                'cancelable': true
+        });
+        save.dispatchEvent(clicEvent);
+        (window.URL || window.webkitURL).revokeObjectURL(save.href);
+    };
+    reader.readAsDataURL(contenidoEnBlob);
+};
+
+function generarTexto(datos) {
+    var texto = [];
+    texto.push(datos);
+    return new Blob(texto, {
+        type: 'text/plain'
+    });
+};
+	
+function Descarga(){
+	var datos = document.getElementById("OUTPUT");
+    descargarArchivo(generarTexto(datos), 'FilmInfo.html');
+}
+
+</script>
+
     <div id='filemenu'>
     <ul>
       <% programs.sort.each do |p| %>
@@ -45,6 +80,4 @@
 		Copia el html generado aquí
     </pre>
 
-	
-	<button class="button" type="button" onclick="alert('añlskdñlksdnf´ñadsljádslfmjñdslakfdasñfdsafnhjakdsbfkñjnñasodfnñn');" >DOWNLOAD</button>
-	<button class="button" type="button" onclick="WriteToFile(8 , 3);">DOWNLOAD</button>
+	<button id="Descarga" type="button" onclick="Descarga()" >DOWNLOAD</button>
