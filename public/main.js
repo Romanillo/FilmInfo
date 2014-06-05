@@ -38,7 +38,7 @@ function descargarArchivo(contenidoEnBlob, nombreArchivo) {
     };
     reader.readAsDataURL(contenidoEnBlob);
 };
-
+/*
 //Función de ayuda: reúne los datos a exportar en un solo objeto
 function obtenerDatos() {
     return {
@@ -58,4 +58,4 @@ function generarTexto(datos) {
 document.getElementById('Descarga').addEventListener('click', function () {
     var datos = obtenerDatos();
     descargarArchivo(generarTexto(datos), 'FilmInfo.html');
-}, false);
+}, false);*/
