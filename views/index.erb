@@ -23,12 +23,6 @@ function descargarArchivo(contenidoEnBlob, nombreArchivo) {
     reader.readAsDataURL(contenidoEnBlob);
 };
 
-function obtenerDatos() {
-    return {
-        document.getElementById('OUTPUT').value
-    };
-};
-
 function generarTexto(datos) {
     var texto = [];
     texto.push(datos);
@@ -38,7 +32,7 @@ function generarTexto(datos) {
 };
 	
 function Descarga(){
-	var datos = obtenerDatos();
+	var datos = document.getElementById("OUTPUT");
     descargarArchivo(generarTexto(datos), 'FilmInfo.html');
 }
 
