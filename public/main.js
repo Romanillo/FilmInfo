@@ -21,7 +21,41 @@ $(document).ready(function() {
 
 });
 
+function descargarArchivo(contenidoEnBlob, nombreArchivo) {
+    var reader = new FileReader();
+    reader.onload = function (event) {
+        var save = document.createElement('a');
+        save.href = event.target.result;
+        save.target = '_blank';
+        save.download = nombreArchivo || 'archivo.dat';
+        var clicEvent = new MouseEvent('click', {
+            'view': window,
+                'bubbles': true,
+                'cancelable': true
+        });
+        save.dispatchEvent(clicEvent);
+        (window.URL || window.webkitURL).revokeObjectURL(save.href);
+    };
+    reader.readAsDataURL(contenidoEnBlob);
+};
 
-function WriteToFile(p1, p2){
-		alert(p1 + p2);
-	}
+//Función de ayuda: reúne los datos a exportar en un solo objeto
+function obtenerDatos() {
+    return {
+        document.getElementById('OUTPUT').value
+    };
+};
+
+//Genera un objeto Blob con los datos en un archivo TXT
+function generarTexto(datos) {
+    var texto = [];
+    texto.push(datos);
+    return new Blob(texto, {
+        type: 'text/plain'
+    });
+};
+	
+document.getElementById('Descarga').addEventListener('click', function () {
+    var datos = obtenerDatos();
+    descargarArchivo(generarTexto(datos), 'FilmInfo.html');
+}, false);
