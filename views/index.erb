@@ -23,14 +23,13 @@ function descargarArchivo(contenidoEnBlob, nombreArchivo) {
     reader.readAsDataURL(contenidoEnBlob);
 };
 
-document.getElementById('Descarga').addEventListener('click', function () {
-    var datos = document.getElementById("OUTPUT").innerHTML;
-    alert(datos);
+function Descarga(){
+	var datos = document.getElementById("OUTPUT").innerHTML;
     var texto = [];
     texto.push(datos);
     var blob = new Blob(texto, {type: 'text/plain'});
     descargarArchivo(blob, 'FilmInfo.html');
-}, false);
+}
 
 </script>
 

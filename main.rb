@@ -23,7 +23,7 @@ get '/' do
       :locals => { :source => source , :programs => programs }
 end
 
-get '/grammar' do
+get '/gramatica' do
   erb :grammar
 end
 
