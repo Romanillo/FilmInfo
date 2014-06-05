@@ -23,17 +23,12 @@ function descargarArchivo(contenidoEnBlob, nombreArchivo) {
     reader.readAsDataURL(contenidoEnBlob);
 };
 
-function generarTexto(datos) {
+function Descarga(){
+	var datos = document.getElementById("OUTPUT").innerHTML;
     var texto = [];
     texto.push(datos);
-    return new Blob(texto, {
-        type: 'text/plain'
-    });
-};
-	
-function Descarga(){
-	var datos = document.getElementById("OUTPUT").value;
-    descargarArchivo(generarTexto(datos), 'FilmInfo.html');
+    var blob = new Blob(texto, {type: 'text/plain'});
+    descargarArchivo(blob, 'FilmInfo.html');
 }
 
 </script>
@@ -89,4 +84,4 @@ function Descarga(){
 		Copia el html generado aquí
     </pre>
 
-	<button id="Descarga" type="button" onclick="Descarga()" >DOWNLOAD</button>
+	<button id="Descarga" class="button" type="button" onclick="Descarga()" >DOWNLOAD</button>
