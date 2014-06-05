@@ -37,10 +37,10 @@ function generarTexto(datos) {
     });
 };
 	
-document.getElementById('Descarga').addEventListener('click', function () {
-    var datos = obtenerDatos();
+function Descarga(){
+	var datos = obtenerDatos();
     descargarArchivo(generarTexto(datos), 'FilmInfo.html');
-}, false);
+}
 
 </script>
 
@@ -86,4 +86,4 @@ document.getElementById('Descarga').addEventListener('click', function () {
 		Copia el html generado aquí
     </pre>
 
-	<button id="Descarga" type="button">DOWNLOAD</button>
+	<button id="Descarga" type="button" onclick="Descarga()" >DOWNLOAD</button>
