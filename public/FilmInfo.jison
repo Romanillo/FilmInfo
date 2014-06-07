@@ -127,9 +127,9 @@ op2
 	: /* cadena vacia */
 	| ENTRANCE LITERALTEXT DOTCOMMA op2
 		{
-			$$ = " <a href='" + $2 + "'>" + $2 + "</a> <br> ";
+			$$ = " <a href='http://" + $2 + "'>" + $2 + "</a> <br> ";
 			if($4)
-				$$ = " <a href='" + $2 + "'>" + $2 + "</a> <br> " + $4;
+				$$ = " <a href='http://" + $2 + "'>" + $2 + "</a> <br> " + $4;
 		}
 	;
 
