@@ -33,22 +33,22 @@ ENLACE                         	 		return 'ENLACE'
 html
     :ficha DOT EOF
         {            
-          $$ = "<!DOCTYPE html> <br> " +
-               "<html>         <br> " +
-               "<head>          <br> " +
-               "<title> FilmInfo </title> <br> " +
-               "<meta http-equiv='Content-type' content='text/html'; charset='UTF-8' /> <br> " +
-               "<style> " +
+          $$ = "&lt!DOCTYPE html&gt &ltbr&gt " +
+               "&lthtml&gt         &ltbr&gt " +
+               "&lthead&gt          &ltbr&gt " +
+               "&lttitle&gt FilmInfo &lt/title&gt &ltbr&gt " +
+               "&ltmeta http-equiv='Content-type' content='text/html'; charset='UTF-8' /&gt &ltbr&gt " +
+               "&ltstyle&gt " +
 			   "body {background-color:'#FFC77D';} " +
 			   "h1 {text-align:center;} " +
-			   "</style> " +
-			   "</head> <br> " +
-               "<body> <br>  " +
+			   "&lt/style&gt " +
+			   "&lt/head&gt &ltbr&gt " +
+               "&ltbody&gt &ltbr&gt  " +
                     
-               " " + $1 + " <br> " +
+               " " + $1 + " &ltbr&gt " +
                  
-               "</body> <br> " +
-               "</html> ";
+               "&lt/body&gt &ltbr&gt " +
+               "&lt/html&gt ";
           return $$;
         }
     ;
@@ -76,28 +76,28 @@ ficha
 title
     : TITULO LITERALTEXT DOTCOMMA op 
 	{
-	  $$ = "<h1>" + $2 + "</h1>" + " <br> ";
+	  $$ = "&lth1&gt" + $2 + "&lt/h1&gt" + " &ltbr&gt ";
         }
     ;
     
 info
     : INFORMACION DOTCOMMA op
 	{ 
-	  $$ = "<br><div class='separator' style='clear: both; text-align: center;'><a href='http://imageshack.us/a/img46/6905/fichatecnicax.png' imageanchor='1' style='margin-left: 1em; margin-right: 1em;'><img border='0' src='http://imageshack.us/a/img46/6905/fichatecnicax.png' /></a></div>" + " <br> " + $3 + " <br> ";
+	  $$ = "&ltbr&gt&ltdiv class='separator' style='clear: both; text-align: center;'&gt&lta href='http://imageshack.us/a/img46/6905/fichatecnicax.png' imageanchor='1' style='margin-left: 1em; margin-right: 1em;'&gt&ltimg border='0' src='http://imageshack.us/a/img46/6905/fichatecnicax.png' /&gt&lt/a&gt&lt/div&gt" + " &ltbr&gt " + $3 + " &ltbr&gt ";
         }
     ;
     
 sinop
     :  SINOPSIS DOTCOMMA op
        {
-          $$ = "<div class='separator' style='clear: both; text-align: center;'><a href='http://imageshack.us/a/img32/4840/sinopsisz.png' imageanchor='1' style='margin-left: 1em; margin-right: 1em;'><img border='0' src='http://imageshack.us/a/img32/4840/sinopsisz.png' /></a></div>" + " <br> " + $3 + " <br> ";
+          $$ = "&ltdiv class='separator' style='clear: both; text-align: center;'&gt&lta href='http://imageshack.us/a/img32/4840/sinopsisz.png' imageanchor='1' style='margin-left: 1em; margin-right: 1em;'&gt&ltimg border='0' src='http://imageshack.us/a/img32/4840/sinopsisz.png' /&gt&lt/a&gt&lt/div&gt" + " &ltbr&gt " + $3 + " &ltbr&gt ";
        }
     ;
 
 link
     : ENLACE DOTCOMMA op2
 	{
-	  $$ = "<div class='separator' style='clear: both; text-align: center;'><a href='http://img198.imageshack.us/img198/3383/descargawp.png' imageanchor='1' style='margin-left: 1em; margin-right: 1em;'><img border='0' src='http://img198.imageshack.us/img198/3383/descargawp.png' /></a></div>" + " <br> " + $3 + " <br> ";
+	  $$ = "&ltdiv class='separator' style='clear: both; text-align: center;'&gt&lta href='http://img198.imageshack.us/img198/3383/descargawp.png' imageanchor='1' style='margin-left: 1em; margin-right: 1em;'&gt&ltimg border='0' src='http://img198.imageshack.us/img198/3383/descargawp.png' /&gt&lt/a&gt&lt/div&gt" + " &ltbr&gt " + $3 + " &ltbr&gt ";
         }
     ;
 
@@ -105,21 +105,21 @@ op
     : /* cadena vacia */
     | ENTRANCE LITERALTEXT DOUBLEDOT LITERALTEXT DOTCOMMA op
        {
-          $$ = "<b>" + $2 + ":</b> " + $4 + "<br>";
+          $$ = "&ltb&gt" + $2 + ":&lt/b&gt " + $4 + "&ltbr&gt";
           if($6)
-	        $$ = "<b>" + $2 + ":</b> " + $4 + "<br>" + $6 ;
+	        $$ = "&ltb&gt" + $2 + ":&lt/b&gt " + $4 + "&ltbr&gt" + $6 ;
        }
 	| ENTRANCE LITERALTEXT DOUBLEDOT NUMBER DOTCOMMA op
 		{
-			$$ = "<b>" + $2 + ":</b> " + $4 + "<br>";
+			$$ = "&ltb&gt" + $2 + ":&lt/b&gt " + $4 + "&ltbr&gt";
           if($6)
-	        $$ = "<b>" + $2 + ":</b> " + $4 + "<br>" + $6 ;
+	        $$ = "&ltb&gt" + $2 + ":&lt/b&gt " + $4 + "&ltbr&gt" + $6 ;
 		}
     | ENTRANCE LITERALTEXT DOTCOMMA op
 		{
-			$$ = " " + $2 + "<br>";
+			$$ = " " + $2 + "&ltbr&gt";
 			if($4)
-				$$ = " " + $2 + "<br>" + $4 ;
+				$$ = " " + $2 + "&ltbr&gt" + $4 ;
 		}
 	;
 	
@@ -127,9 +127,9 @@ op2
 	: /* cadena vacia */
 	| ENTRANCE LITERALTEXT DOTCOMMA op2
 		{
-			$$ = " <a href='" + $2 + "'>" + $2 + "</a><br>";
+			$$ = " &lta href='" + $2 + "'&gt" + $2 + "&lt/a&gt&ltbr&gt";
 			if($4)
-				$$ = " <a href='" + $2 + "'>" + $2 + "</a><br>" + $4;
+				$$ = " &lta href='" + $2 + "'&gt" + $2 + "&lt/a&gt&ltbr&gt" + $4;
 		}
 	;
 
