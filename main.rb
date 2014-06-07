@@ -9,8 +9,8 @@ set :reserved_words, %w{grammar test login auth}
 set :max_files, 8        # no more than max_files will be saved
 
 helpers do
-  def actual?(path='/')
-    (request.path==path || request.path+'/') ? 'class = "activo"' : ''
+  def current?(path='/')
+    (request.path==path || request.path+'/') ? 'class = "current"' : ''
   end
 end
 
