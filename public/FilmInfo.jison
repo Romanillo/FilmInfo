@@ -91,7 +91,7 @@ sinop
     ;
 
 link
-    : ENLACE DOTCOMMA op
+    : ENLACE DOTCOMMA op2
 	{
 	  $$ = "<div class='separator' style='clear: both; text-align: center;'><a href='http://img198.imageshack.us/img198/3383/descargawp.png' imageanchor='1' style='margin-left: 1em; margin-right: 1em;'><img border='0' src='http://img198.imageshack.us/img198/3383/descargawp.png' /></a></div>" + " <br> " + $3 + " <br> ";
         }
@@ -118,3 +118,14 @@ op
 				$$ = " " + $2 + "<br> <br> " + $4 ;
 		}
 	;
+	
+op2
+	: /* cadena vacia */
+	| ENTRANCE LITERALTEXT DOTCOMMA op2
+		{
+			$$ = " <a href='" + $2 + "'>" + $2 + "</a>";
+			if($4)
+				$$ = " <a href='" + $2 + "'>" + $2 + "</a>" + $4;
+		}
+	;
+
