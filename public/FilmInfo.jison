@@ -38,7 +38,11 @@ html
                "<head>          <br> " +
                "<title> FilmInfo </title> <br> " +
                "<meta http-equiv='Content-type' content='text/html'; charset='UTF-8' /> <br> " +
-               "</head> <br> " +
+               "<style> " +
+			   "body {background-color:'#FFC77D';} " +
+			   "h1 {text-align:center;} " +
+			   "</style> " +
+			   "</head> <br> " +
                "<body> <br>  " +
                     
                " " + $1 + " <br> " +
