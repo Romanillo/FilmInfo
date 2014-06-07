@@ -79,21 +79,21 @@ title
 info
     : INFORMACION DOTCOMMA op
 	{ 
-	  $$ = "<br><div class=\"separator\" style=\"clear: both; text-align: center;\"><a href=\"http://imageshack.us/a/img46/6905/fichatecnicax.png\" imageanchor=\"1\" style=\"margin-left: 1em; margin-right: 1em;\"><img border=\"0\" src=\"http://imageshack.us/a/img46/6905/fichatecnicax.png\" /></a></div>" + " <br> " + $3 + " <br> ";
+	  $$ = "<br><div class='separator' style='clear: both; text-align: center;'><a href='http://imageshack.us/a/img46/6905/fichatecnicax.png' imageanchor='1' style='margin-left: 1em; margin-right: 1em;'><img border='0' src='http://imageshack.us/a/img46/6905/fichatecnicax.png' /></a></div>" + " <br> " + $3 + " <br> ";
         }
     ;
     
 sinop
     :  SINOPSIS DOTCOMMA op
        {
-          $$ = "<div class=\"separator\" style=\"clear: both; text-align: center;\"><a href=\"http://imageshack.us/a/img32/4840/sinopsisz.png\" imageanchor=\"1\" style=\"margin-left: 1em; margin-right: 1em;\"><img border=\"0\" src=\"http://imageshack.us/a/img32/4840/sinopsisz.png\" /></a></div>" + " <br> " + $3 + " <br> ";
+          $$ = "<div class='separator' style='clear: both; text-align: center;'><a href='http://imageshack.us/a/img32/4840/sinopsisz.png' imageanchor='1' style='margin-left: 1em; margin-right: 1em;'><img border='0' src='http://imageshack.us/a/img32/4840/sinopsisz.png' /></a></div>" + " <br> " + $3 + " <br> ";
        }
     ;
 
 link
     : ENLACE DOTCOMMA op
 	{
-	  $$ = "<div class=\"separator\" style=\"clear: both; text-align: center;\"><a href=\"http://img198.imageshack.us/img198/3383/descargawp.png\" imageanchor=\"1\" style=\"margin-left: 1em; margin-right: 1em;\"><img border=\"0\" src=\"http://img198.imageshack.us/img198/3383/descargawp.png\" /></a></div>" + " <br> " + $3 + " <br> ";
+	  $$ = "<div class='separator' style='clear: both; text-align: center;'><a href='http://img198.imageshack.us/img198/3383/descargawp.png' imageanchor='1' style='margin-left: 1em; margin-right: 1em;'><img border='0' src='http://img198.imageshack.us/img198/3383/descargawp.png' /></a></div>" + " <br> " + $3 + " <br> ";
         }
     ;
 

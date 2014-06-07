@@ -119,15 +119,15 @@ case 7:
         
 break;
 case 8: 
-	  this.$ = "<br><div class=\"separator\" style=\"clear: both; text-align: center;\"><a href=\"http://imageshack.us/a/img46/6905/fichatecnicax.png\" imageanchor=\"1\" style=\"margin-left: 1em; margin-right: 1em;\"><img border=\"0\" src=\"http://imageshack.us/a/img46/6905/fichatecnicax.png\" /></a></div>" + " <br> " + $$[$0] + " <br> ";
+	  this.$ = "<br><div class='separator' style='clear: both; text-align: center;'><a href='http://imageshack.us/a/img46/6905/fichatecnicax.png' imageanchor='1' style='margin-left: 1em; margin-right: 1em;'><img border='0' src='http://imageshack.us/a/img46/6905/fichatecnicax.png' /></a></div>" + " <br> " + $$[$0] + " <br> ";
         
 break;
 case 9:
-          this.$ = "<div class=\"separator\" style=\"clear: both; text-align: center;\"><a href=\"http://imageshack.us/a/img32/4840/sinopsisz.png\" imageanchor=\"1\" style=\"margin-left: 1em; margin-right: 1em;\"><img border=\"0\" src=\"http://imageshack.us/a/img32/4840/sinopsisz.png\" /></a></div>" + " <br> " + $$[$0] + " <br> ";
+          this.$ = "<div class='separator' style='clear: both; text-align: center;'><a href='http://imageshack.us/a/img32/4840/sinopsisz.png' imageanchor='1' style='margin-left: 1em; margin-right: 1em;'><img border='0' src='http://imageshack.us/a/img32/4840/sinopsisz.png' /></a></div>" + " <br> " + $$[$0] + " <br> ";
        
 break;
 case 10:
-	  this.$ = "<div class=\"separator\" style=\"clear: both; text-align: center;\"><a href=\"http://img198.imageshack.us/img198/3383/descargawp.png\" imageanchor=\"1\" style=\"margin-left: 1em; margin-right: 1em;\"><img border=\"0\" src=\"http://img198.imageshack.us/img198/3383/descargawp.png\" /></a></div>" + " <br> " + $$[$0] + " <br> ";
+	  this.$ = "<div class='separator' style='clear: both; text-align: center;'><a href='http://img198.imageshack.us/img198/3383/descargawp.png' imageanchor='1' style='margin-left: 1em; margin-right: 1em;'><img border='0' src='http://img198.imageshack.us/img198/3383/descargawp.png' /></a></div>" + " <br> " + $$[$0] + " <br> ";
         
 break;
 case 12:
