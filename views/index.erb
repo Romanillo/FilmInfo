@@ -60,7 +60,7 @@ function Descarga(){
 		<tr>
 			<td>
 			  <label for="saveas">Save as</label>
-			  <input type="text" name="fname" title="identificador" pattern="^(?!test$)\w+$"/>
+			  <input id="saveas" type="text" name="fname" title="identificador" pattern="^(?!test$)\w+$"/>
 			</form>
 			
 			</td>
@@ -78,8 +78,8 @@ function Descarga(){
 <div id="flash"><%= flash[:notice] if flash[:notice]%></div>
 </p>
 
-<pre id="OUTPUT">
+<pre id ="OUTPUT">
 	Copia el html generado aquí
 </pre>
 
-<button id="" class="button" type="button" onclick="Descarga()" >DOWNLOAD</button>
+<button id="Descarga" class="button" type="button" onclick="Descarga()" >DOWNLOAD</button>

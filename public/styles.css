@@ -36,7 +36,7 @@ th, td	{
 input        { 	
 	text-align: left;  
 	border: none;       
-	width: 40%;
+	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -280,10 +280,3 @@ textarea	{
 	overflow-y: scroll; 
 	overflow-x: scroll; 
 }
-
-#Descarga{
-	margin-left: auto;
-	margin-right: auto;    
-	width: 80%;
-}
-
