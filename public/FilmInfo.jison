@@ -101,21 +101,21 @@ op
     : /* cadena vacia */
     | ENTRANCE LITERALTEXT DOUBLEDOT LITERALTEXT DOTCOMMA op
        {
-          $$ = "<b>" + $2 + ":</b> " + $4 + "<br> <br>  ";
+          $$ = "<b>" + $2 + ":</b> " + $4 + "<br>";
           if($6)
-	        $$ = "<b>" + $2 + ":</b> " + $4 + "<br> <br> " + $6 ;
+	        $$ = "<b>" + $2 + ":</b> " + $4 + "<br>" + $6 ;
        }
 	| ENTRANCE LITERALTEXT DOUBLEDOT NUMBER DOTCOMMA op
 		{
-			$$ = "<b>" + $2 + ":</b> " + $4 + "<br> <br> ";
+			$$ = "<b>" + $2 + ":</b> " + $4 + "<br>";
           if($6)
-	        $$ = "<b>" + $2 + ":</b> " + $4 + "<br> <br> " + $6 ;
+	        $$ = "<b>" + $2 + ":</b> " + $4 + "<br>" + $6 ;
 		}
     | ENTRANCE LITERALTEXT DOTCOMMA op
 		{
-			$$ = " " + $2 + "<br> <br> ";
+			$$ = " " + $2 + "<br>";
 			if($4)
-				$$ = " " + $2 + "<br> <br> " + $4 ;
+				$$ = " " + $2 + "<br>" + $4 ;
 		}
 	;
 	
@@ -123,9 +123,9 @@ op2
 	: /* cadena vacia */
 	| ENTRANCE LITERALTEXT DOTCOMMA op2
 		{
-			$$ = " <a href='" + $2 + "'>" + $2 + "</a>";
+			$$ = " <a href='" + $2 + "'>" + $2 + "</a><br>";
 			if($4)
-				$$ = " <a href='" + $2 + "'>" + $2 + "</a>" + $4;
+				$$ = " <a href='" + $2 + "'>" + $2 + "</a><br>" + $4;
 		}
 	;
 
