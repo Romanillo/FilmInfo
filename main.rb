@@ -9,17 +9,8 @@ set :max_files, 8        # no more than max_files will be saved
 
 helpers do
   def current?(path='/')
-    (request.path==path || request.path+'/') ? 'class = "current"' : ''
+    (request.path==path || request.path==path+'/') ? 'class = "current"' : ''
   end
-end
-
-get '/' do
-  programs = PL0Program.all
-  pp programs
-  
-  source = "Inserte aqui los datos."
-  erb :index,
-      :locals => { :source => source , :programs => programs }
 end
 
 get '/grammar' do
