@@ -83,21 +83,21 @@ performAction: function anonymous(yytext, yyleng, yylineno, yy, yystate /* actio
 var $0 = $$.length - 1;
 switch (yystate) {
 case 1:            
-          this.$ = "&lt!DOCTYPE html&gt &ltbr&gt " +
-               "&lthtml&gt         &ltbr&gt " +
-               "&lthead&gt          &ltbr&gt " +
-               "&lttitle&gt FilmInfo &lt/title&gt &ltbr&gt " +
-               "&ltmeta http-equiv='Content-type' content='text/html'; charset='UTF-8' /&gt &ltbr&gt " +
+          this.$ = "&lt!DOCTYPE html&gt <br> " +
+               "&lthtml&gt         <br> " +
+               "&lthead&gt          <br> " +
+               "&lttitle&gt FilmInfo &lt/title&gt <br> " +
+               "&ltmeta http-equiv='Content-type' content='text/html'; charset='UTF-8' /&gt <br> " +
                "&ltstyle&gt " +
 			   "body {background-color:'#FFC77D';} " +
 			   "h1 {text-align:center;} " +
 			   "&lt/style&gt " +
-			   "&lt/head&gt &ltbr&gt " +
-               "&ltbody&gt &ltbr&gt  " +
+			   "&lt/head&gt <br> " +
+               "&ltbody&gt <br>  " +
                     
-               " " + $$[$0-2] + " &ltbr&gt " +
+               " " + $$[$0-2] + " <br> " +
                  
-               "&lt/body&gt &ltbr&gt " +
+               "&lt/body&gt <br> " +
                "&lt/html&gt ";
           return this.$;
         
@@ -119,43 +119,43 @@ case 6: this.$ = " " + $$[$0-1];
 	  this.$ = " " + $$[$0-1] + " " + $$[$0];
 break;
 case 7:
-	  this.$ = "&lth1&gt" + $$[$0-2] + "&lt/h1&gt" + " &ltbr&gt ";
+	  this.$ = "&lth1&gt" + $$[$0-2] + "&lt/h1&gt" + " <br> ";
         
 break;
 case 8: 
-	  this.$ = "&ltbr&gt&ltdiv class='separator' style='clear: both; text-align: center;'&gt&lta href='http://imageshack.us/a/img46/6905/fichatecnicax.png' imageanchor='1' style='margin-left: 1em; margin-right: 1em;'&gt&ltimg border='0' src='http://imageshack.us/a/img46/6905/fichatecnicax.png' /&gt&lt/a&gt&lt/div&gt" + " &ltbr&gt " + $$[$0] + " &ltbr&gt ";
+	  this.$ = "<br>&ltdiv class='separator' style='clear: both; text-align: center;'&gt&lta href='http://imageshack.us/a/img46/6905/fichatecnicax.png' imageanchor='1' style='margin-left: 1em; margin-right: 1em;'&gt&ltimg border='0' src='http://imageshack.us/a/img46/6905/fichatecnicax.png' /&gt&lt/a&gt&lt/div&gt" + " <br> " + $$[$0] + " <br> ";
         
 break;
 case 9:
-          this.$ = "&ltdiv class='separator' style='clear: both; text-align: center;'&gt&lta href='http://imageshack.us/a/img32/4840/sinopsisz.png' imageanchor='1' style='margin-left: 1em; margin-right: 1em;'&gt&ltimg border='0' src='http://imageshack.us/a/img32/4840/sinopsisz.png' /&gt&lt/a&gt&lt/div&gt" + " &ltbr&gt " + $$[$0] + " &ltbr&gt ";
+          this.$ = "&ltdiv class='separator' style='clear: both; text-align: center;'&gt&lta href='http://imageshack.us/a/img32/4840/sinopsisz.png' imageanchor='1' style='margin-left: 1em; margin-right: 1em;'&gt&ltimg border='0' src='http://imageshack.us/a/img32/4840/sinopsisz.png' /&gt&lt/a&gt&lt/div&gt" + " <br> " + $$[$0] + " <br> ";
        
 break;
 case 10:
-	  this.$ = "&ltdiv class='separator' style='clear: both; text-align: center;'&gt&lta href='http://img198.imageshack.us/img198/3383/descargawp.png' imageanchor='1' style='margin-left: 1em; margin-right: 1em;'&gt&ltimg border='0' src='http://img198.imageshack.us/img198/3383/descargawp.png' /&gt&lt/a&gt&lt/div&gt" + " &ltbr&gt " + $$[$0] + " &ltbr&gt ";
+	  this.$ = "&ltdiv class='separator' style='clear: both; text-align: center;'&gt&lta href='http://img198.imageshack.us/img198/3383/descargawp.png' imageanchor='1' style='margin-left: 1em; margin-right: 1em;'&gt&ltimg border='0' src='http://img198.imageshack.us/img198/3383/descargawp.png' /&gt&lt/a&gt&lt/div&gt" + " <br> " + $$[$0] + " <br> ";
         
 break;
 case 12:
-          this.$ = "&ltb&gt" + $$[$0-4] + ":&lt/b&gt " + $$[$0-2] + "&ltbr&gt";
+          this.$ = "&ltb&gt" + $$[$0-4] + ":&lt/b&gt " + $$[$0-2] + "<br>";
           if($$[$0])
-	        this.$ = "&ltb&gt" + $$[$0-4] + ":&lt/b&gt " + $$[$0-2] + "&ltbr&gt" + $$[$0] ;
+	        this.$ = "&ltb&gt" + $$[$0-4] + ":&lt/b&gt " + $$[$0-2] + "<br>" + $$[$0] ;
        
 break;
 case 13:
-			this.$ = "&ltb&gt" + $$[$0-4] + ":&lt/b&gt " + $$[$0-2] + "&ltbr&gt";
+			this.$ = "&ltb&gt" + $$[$0-4] + ":&lt/b&gt " + $$[$0-2] + "<br>";
           if($$[$0])
-	        this.$ = "&ltb&gt" + $$[$0-4] + ":&lt/b&gt " + $$[$0-2] + "&ltbr&gt" + $$[$0] ;
+	        this.$ = "&ltb&gt" + $$[$0-4] + ":&lt/b&gt " + $$[$0-2] + "<br>" + $$[$0] ;
 		
 break;
 case 14:
-			this.$ = " " + $$[$0-2] + "&ltbr&gt";
+			this.$ = " " + $$[$0-2] + "<br>";
 			if($$[$0])
-				this.$ = " " + $$[$0-2] + "&ltbr&gt" + $$[$0] ;
+				this.$ = " " + $$[$0-2] + "<br>" + $$[$0] ;
 		
 break;
 case 16:
-			this.$ = " &lta href='" + $$[$0-2] + "'&gt" + $$[$0-2] + "&lt/a&gt&ltbr&gt";
+			this.$ = " &lta href='" + $$[$0-2] + "'&gt" + $$[$0-2] + "&lt/a&gt<br>";
 			if($$[$0])
-				this.$ = " &lta href='" + $$[$0-2] + "'&gt" + $$[$0-2] + "&lt/a&gt&ltbr&gt" + $$[$0];
+				this.$ = " &lta href='" + $$[$0-2] + "'&gt" + $$[$0-2] + "&lt/a&gt<br>" + $$[$0];
 		
 break;
 }
