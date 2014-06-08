@@ -1,88 +1,46 @@
-<h1>Información de Peliculas</h1>
-
 <script type="text/javascript" src="/FilmInfo.js"></script>
 <script type="text/javascript" src="/main.js"></script>
-	
-	
-<script>
-function descargarArchivo(contenidoEnBlob, nombreArchivo) {
-    var reader = new FileReader();
-    reader.onload = function (event) {
-        var save = document.createElement('a');
-        save.href = event.target.result;
-        save.target = '_blank';
-        save.download = nombreArchivo || 'archivo.dat';
-        var clicEvent = new MouseEvent('click', {
-            'view': window,
-                'bubbles': true,
-                'cancelable': true
-        });
-        save.dispatchEvent(clicEvent);
-        (window.URL || window.webkitURL).revokeObjectURL(save.href);
-    };
-    reader.readAsDataURL(contenidoEnBlob);
-};
 
-function Descarga(){
-	var datos = document.getElementById("OUTPUT").innerHTML;
-    var texto = [];
-    texto.push(datos);
-    var blob = new Blob(texto, {type: 'text/plain'});
-    descargarArchivo(blob, 'FilmInfo.html');
-}
+<h1>Información de Peliculas</h1>
+<div id='filemenu'>
+<ul>
+  <% programs.sort.each do |p| %>
+  <li><a href="<%= p.name %>" <%=current?('/'+p.name)%>><%= p.name %></a></li>
+  <% end %>
+</ul>
+</div>
+<br><br>
+<table>
+	<tbody>
+		<tr>
+			<td><form action="/save" method="post">
+			  <textarea id="input" name="input" autofocus ><%= source %></textarea>
+			  <br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			  <label for="saveas">Save as</label>
+			  <input id="saveas" type="text" name="fname" title="identificador" pattern="^(?!test$)\w+$"/>
+			</form>
+			
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<br>
+				<button class="button" id="parse" type="button">Parse</button>
+			</td>
+		</tr>
+	</tbody>
+</table>
 
-</script>
+<p>
+<div id="flash"><%= flash[:notice] if flash[:notice]%></div>
+</p>
 
-	<div id='cssmenu'>
-      <ul>
-        <li class='active'> <a href="/"  title="Home" <%=actual?("/")%>>Home</a> </li>
-        <li> <a href="/grammar"  title="grammar" <%=actual?("/grammar")%>>Gramatica</a> </li>
-        <!--<li> <a href="/test"  title="Test" <%=actual?("/test")%>>Test</a> </li> -->
-		<li> <a href="https://github.com/Romanillo/FilmInfo"  title="Repo">Repositorio</a> </li>
-        <li> <a href="http://cc.etsii.ull.es/"  title="Centro" >Universidad</a> </li>
-        <li class='last'> <a href="http://zaach.github.io/jison/"  title="Jison">Jison</a> </li>
-      </ul>
-    </div>
-    <div id='filemenu'>
-    <ul>
-      <% programs.sort.each do |p| %>
-      <li><a href="<%= p.name %>" <%=actual?('/'+p.name)%>><%= p.name %></a></li>
-      <% end %>
-    </ul>
-    </div>
-    <br><br>
-	<table>
-		<tbody>
-			<tr>
-				<td><form action="/save" method="post">
-				  <textarea id="input" name="input" autofocus ><%= source %></textarea>
-				  <br>
-				</td>
-			</tr>
-			<tr>
-				<td>
-				  <label for="saveas">Save as</label>
-				  <input id="saveas" type="text" name="fname" title="identificador" pattern="^(?!test$)\w+$"/>
-				</form>
-				
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<br>
-					<button class="button" id="parse" type="button">Parse</button>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-   
+<pre id ="OUTPUT">
+	Copia el html generado aquí
+</pre>
 
-  <p>
-    <div id="flash"><%= flash[:notice] if flash[:notice]%></div>
-  </p>
-  
-    <pre id ="OUTPUT">
-		Copia el html generado aquí
-    </pre>
-
-	<button id="Descarga" class="button" type="button" onclick="Descarga()" >DOWNLOAD</button>
+<button id="Descarga" class="button" type="button" onclick="Descarga()" >DOWNLOAD</button>

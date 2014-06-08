@@ -20,3 +20,29 @@ $(document).ready(function() {
   });
 
 });
+
+function descargarArchivo(contenidoEnBlob, nombreArchivo) {
+    var reader = new FileReader();
+    reader.onload = function (event) {
+        var save = document.createElement('a');
+        save.href = event.target.result;
+        save.target = '_blank';
+        save.download = nombreArchivo || 'archivo.dat';
+        var clicEvent = new MouseEvent('click', {
+            'view': window,
+                'bubbles': true,
+                'cancelable': true
+        });
+        save.dispatchEvent(clicEvent);
+        (window.URL || window.webkitURL).revokeObjectURL(save.href);
+    };
+    reader.readAsDataURL(contenidoEnBlob);
+};
+
+function Descarga(){
+	var datos = document.getElementById("OUTPUT").innerHTML;
+    var texto = [];
+    texto.push(datos);
+    var blob = new Blob(texto, {type: 'text/plain'});
+    descargarArchivo(blob, 'FilmInfo.html');
+};

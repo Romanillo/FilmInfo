@@ -5,26 +5,21 @@ require 'sinatra/flash'
 require 'database'
 require 'pp'
 
-set :reserved_words, %w{grammar test login auth}
+set :reserved_words, %w{grammar test}
 set :max_files, 8        # no more than max_files will be saved
 
 helpers do
-  def actual?(path='/')
-    (request.path==path || request.path+'/') ? 'class = "activo"' : ''
+  def current?(path='/')
+    (request.path==path || request.path==path+'/') ? 'class = "current"' : ''
   end
 end
 
-get '/' do
-  programs = PL0Program.all
-  pp programs
-  
-  source = "Inserte aqui los datos."
-  erb :index,
-      :locals => { :source => source , :programs => programs }
+get '/grammar' do
+  erb :grammar
 end
 
-get '/gramatica' do
-  erb :grammar
+get '/test' do
+  erb :test
 end
 
 get '/:selected?' do |selected|
