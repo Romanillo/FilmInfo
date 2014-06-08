@@ -24,51 +24,55 @@
 	<ol>
 		<li> $\Sigma = \{ NUMBER, TITULO, INFORMACION, SINOPSIS, ENLACE, CUADROTEXTO, ENTRANCE, DOTCOMMA, DOUBLEDOT, DOT, EOF, LITERALTEXT, INVALID \} $
 			<br>
-		<li> $V = \{ html, ficha, title, info, sinop, link, op \} $ <br>
-		<li> Productions:
-		<ol>
-			<li>
-				<pre>
+			<li> $V = \{ html, ficha, title, info, sinop, link, op \} $ <br>
+			<li> Productions:
+				<ol>
+					<li>
+						<pre>
 
-				html
-				:ficha DOT EOF
-				;
+						html
+						:ficha DOT EOF
+						;
 
-				ficha
-				: /* cadena vacia */
-				| title ficha
-				| info ficha
-				| sinop ficha
-				| link ficha
-				;
+						ficha
+						: /* cadena vacia */
+						| title ficha
+						| info ficha
+						| sinop ficha
+						| link ficha
+						;
 
-				title
-				: TITULO LITERALTEXT DOTCOMMA op 
-				;
+						title
+						: TITULO LITERALTEXT DOTCOMMA op 
+						;
 
 
-				info
-				: INFORMACION DOTCOMMA op
-				;
+						info
+						: INFORMACION DOTCOMMA op
+						;
 
-				sinop
-				:  SINOPSIS DOTCOMMA op
-				;
-				
-				link
-				: ENLACE DOTCOMMA op
-				;
-				
-				op
-				: /* cadena vacia */
-				| ENTRANCE LITERALTEXT DOUBLEDOT LITERALTEXT DOTCOMMA op
-				| ENTRANCE LITERALTEXT DOUBLEDOT NUMBER DOTCOMMA op
-				| ENTRANCE LITERALTEXT DOTCOMMA op
-				;
+						sinop
+						:  SINOPSIS DOTCOMMA op
+						;
+						
+						link
+						: ENLACE DOTCOMMA op
+						;
+						
+						op
+						: /* cadena vacia */
+						| ENTRANCE LITERALTEXT DOUBLEDOT LITERALTEXT DOTCOMMA op
+						| ENTRANCE LITERALTEXT DOUBLEDOT NUMBER DOTCOMMA op
+						| ENTRANCE LITERALTEXT DOTCOMMA op
+						;
 
-				</pre>
-		</ol>
-		<li> Start symbol: $html$
+						</pre>
+					</li>
+				</ol>
+			</li>
+			</li>
+			<li> Start symbol: $html$ </li>
+		</li>
 	</ol>
 </div>
 	
