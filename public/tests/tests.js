@@ -1,5 +1,3 @@
-alert("Empiezan los test!");
-
 var assert = chai.assert; 
 
 suite( 'Parser', function(){
