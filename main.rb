@@ -14,8 +14,8 @@ helpers do
   end
 end
 
-get '/gramatica' do
-  erb :gramatica.erb
+get '/grammar' do
+  erb :grammar.erb
 end
 
 get '/test' do
