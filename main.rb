@@ -15,7 +15,7 @@ helpers do
 end
 
 get '/grammar' do
-  erb :\Gramatica\grammar
+  erb :grammar
 end
 
 get '/test' do
