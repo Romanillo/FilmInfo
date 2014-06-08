@@ -15,7 +15,7 @@ helpers do
 end
 
 get '/grammar' do
-  erb :grammar.erb
+  erb :grammar
 end
 
 get '/test' do
