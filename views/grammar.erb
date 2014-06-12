@@ -55,7 +55,7 @@
 						;
 						
 						link
-						: ENLACE DOTCOMMA op
+						: ENLACE DOTCOMMA op2
 						;
 						
 						op
@@ -63,6 +63,11 @@
 						| ENTRANCE LITERALTEXT DOUBLEDOT LITERALTEXT DOTCOMMA op
 						| ENTRANCE LITERALTEXT DOUBLEDOT NUMBER DOTCOMMA op
 						| ENTRANCE LITERALTEXT DOTCOMMA op
+						;
+						
+						op2
+						: /* cadena vacia */
+						| ENTRANCE LITERALTEXT DOTCOMMA op2
 						;
 
 						</pre>
